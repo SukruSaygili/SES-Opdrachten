@@ -1,5 +1,6 @@
 plugins {
     id 'java'
+    id 'maven-publish'
 }
 
 group = 'be.kuleuven'
@@ -31,5 +32,23 @@ jar {
 
     from {
         configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            groupId = project.group.toString()
+            version = version
+            artifactId = 'Opdracht5CheckNeighboursInGrid'
+
+            from components.java
+        }
+    }
+    repositories {
+        maven {
+            url = "C:\\Users\\MSI-Gamer\\Desktop\\SES-OpdrachtenDeel1\\candycrush\\libs"
+
+        }
     }
 }

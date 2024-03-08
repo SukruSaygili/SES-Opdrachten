@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class CheckNeighboursInGrid {
+    //constructor
+    public CheckNeighboursInGrid() {
+    }
+
     public static Iterable<Integer> getSameNeighboursIds(Iterable<Integer> grid, int width, int height, int indexToCheck){
         /* check whether the specified index is in the grid */
         if(indexToCheck < 0 || indexToCheck >= width * height) {
