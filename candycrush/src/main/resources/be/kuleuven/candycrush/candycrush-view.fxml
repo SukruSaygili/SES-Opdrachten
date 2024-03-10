@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="motherPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.kuleuven.candycrush.CandycrushController">
+   <children>
+      <AnchorPane fx:id="gamePanel" layoutX="375.0" layoutY="113.0" prefHeight="450.0" prefWidth="450.0" />
+      <Button fx:id="resetButton" layoutX="1030.0" layoutY="48.0" mnemonicParsing="false" prefHeight="5.0" prefWidth="75.0" text="Reset" textAlignment="JUSTIFY" textFill="#d70000">
+         <font>
+            <Font size="15.0" />
+         </font></Button>
+      <Text fx:id="scoreText" fill="#ee2424" layoutX="557.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score">
+         <font>
+            <Font name="Bank Gothic Light BT" size="25.0" />
+         </font>
+      </Text>
+      <Text fx:id="helloText" fill="#a41717" layoutX="14.0" layoutY="32.0" opacity="0.54" strokeType="OUTSIDE" strokeWidth="5.0" text="Hello" wrappingWidth="64.0">
+         <font>
+            <Font name="Bank Gothic Light BT" size="16.0" />
+         </font></Text>
+      <Text fx:id="resetText" fill="#a41717" layoutX="945.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Press to start a new game!" wrappingWidth="244.41796875">
+         <font>
+            <Font name="Bank Gothic Light BT" size="16.0" />
+         </font></Text>
+   </children>
+</AnchorPane>
