@@ -1,6 +1,6 @@
 package be.kuleuven.candycrush.model;
-import be.kuleuven.CheckNeighboursInGrid;
 
+import be.kuleuven.CheckNeighboursInGrid;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
@@ -29,7 +29,6 @@ public class CandycrushModel {
             playground.add(randomNr);
         }
     }
-
     //default for a standard game (overload)
     public CandycrushModel(Player player) {
         this(player, 9, 9);
@@ -55,29 +54,36 @@ public class CandycrushModel {
         System.out.print("\n");
     }
 
-
     /*getters*/
     public int getWidth() {
         return width;
     }
-
     public int getHeight() {
         return height;
     }
-
     public Player getPlayer() {
         return player;
     }
-
     public ArrayList<Integer> getPlayground() {
         return playground;
+    }
+    public int getIndexFromRowColumn(int column, int row) {     //row en column: beginnen vanaf 0
+        if (column < this.width && row < this.height) {
+            return column + row*width;
+        }
+        else {
+            System.out.println("Column or row, or both are out of range!");
+            return -1;
+        }
     }
 
     /*setters*/
     public void setPlayground(ArrayList<Integer> nPlayground) {     //to test the updateCandySelected Method
         this.playground = nPlayground;
     }
-
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
 
     /*other methods*/
     public void updateCandySelected(int index) {
@@ -122,19 +128,10 @@ public class CandycrushModel {
                 }
             }
             player.setScore(player.getScore() + 1);     //+1, het snoepje zelf dat de buren heeft
+            System.out.println(player.getName());
         }
         else {
             System.out.println("There are not enough neighbour candys!");
-        }
-    }
-
-    public int getIndexFromRowColumn(int column, int row) {     //row en column: beginnen vanaf 0
-        if (column < this.width && row < this.height) {
-            return column + row*width;
-        }
-        else {
-            System.out.println("Column or row, or both are out of range!");
-            return -1;
         }
     }
 }

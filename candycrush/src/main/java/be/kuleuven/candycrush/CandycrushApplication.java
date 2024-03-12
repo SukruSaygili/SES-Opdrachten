@@ -10,13 +10,12 @@ import java.io.IOException;
 public class CandycrushApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(CandycrushApplication.class.getResource("candycrush-view.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(CandycrushApplication.class.getResource("login-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 1200, 675);
-        stage.setTitle("Hello!");
+        stage.setTitle("Candy Crush");
         stage.setScene(scene);
         stage.show();
     }
-
     public static void main(String[] args) {
         launch();
     }

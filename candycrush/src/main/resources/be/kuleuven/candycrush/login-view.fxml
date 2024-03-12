@@ -1,14 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="be.kuleuven.candycrush.LoginController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.kuleuven.candycrush.controller.LoginController">
+   <children>
+      <AnchorPane fx:id="background" prefHeight="675.0" prefWidth="1200.0" />
+      <TextField fx:id="name" layoutX="523.0" layoutY="400.0" minHeight="-Infinity" minWidth="-Infinity" />
+      <Text fx:id="welcomeText" boundsType="VISUAL" fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to Candy Crush" wrappingWidth="720.13671875" AnchorPane.bottomAnchor="622.0" AnchorPane.leftAnchor="294.611328125" AnchorPane.rightAnchor="228.875" AnchorPane.topAnchor="27.1943359375">
+         <font>
+            <Font name="Bank Gothic Light BT" size="50.0" />
+         </font>
+      </Text>
+      <Button fx:id="startButton" layoutX="550.0" layoutY="445.0" mnemonicParsing="false" text="Enter game" textAlignment="CENTER">
+         <font>
+            <Font name="Bank Gothic Light BT" size="12.0" />
+         </font>
+      </Button>
+   </children>
 </AnchorPane>

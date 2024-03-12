@@ -2,27 +2,102 @@
 
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="motherPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.kuleuven.candycrush.CandycrushController">
+<AnchorPane fx:id="motherPanel" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="675.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="be.kuleuven.candycrush.controller.CandycrushController">
    <children>
+      <AnchorPane fx:id="backgroundImage" prefHeight="675.0" prefWidth="1200.0" />
       <AnchorPane fx:id="gamePanel" layoutX="375.0" layoutY="113.0" prefHeight="450.0" prefWidth="450.0" />
-      <Button fx:id="resetButton" layoutX="1030.0" layoutY="48.0" mnemonicParsing="false" prefHeight="5.0" prefWidth="75.0" text="Reset" textAlignment="JUSTIFY" textFill="#d70000">
+      <Button fx:id="resetButton" layoutX="1020.0" layoutY="48.0" mnemonicParsing="false" prefHeight="5.0" prefWidth="75.0" text="Reset" textAlignment="JUSTIFY">
          <font>
-            <Font size="15.0" />
-         </font></Button>
-      <Text fx:id="scoreText" fill="#ee2424" layoutX="557.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score">
+            <Font name="Bank Gothic Light BT" size="16.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" blue="0.9843137264251709" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="1.0" blue="0.0941176488995552" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill></Button>
+      <Text fx:id="scoreText" layoutX="559.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score">
          <font>
             <Font name="Bank Gothic Light BT" size="25.0" />
          </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" blue="0.9843137264251709" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="1.0" blue="0.0941176488995552" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
       </Text>
-      <Text fx:id="helloText" fill="#a41717" layoutX="14.0" layoutY="32.0" opacity="0.54" strokeType="OUTSIDE" strokeWidth="5.0" text="Hello" wrappingWidth="64.0">
+      <Text fx:id="helloText" layoutX="14.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="5.0" text="Hello" wrappingWidth="64.0">
          <font>
-            <Font name="Bank Gothic Light BT" size="16.0" />
-         </font></Text>
-      <Text fx:id="resetText" fill="#a41717" layoutX="945.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Press to start a new game!" wrappingWidth="244.41796875">
+            <Font name="Bank Gothic Light BT" size="18.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" blue="0.9843137264251709" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="1.0" blue="0.0941176488995552" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></Text>
+      <Text fx:id="resetText" layoutX="918.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Press to start a new game!" wrappingWidth="271.41796875">
          <font>
-            <Font name="Bank Gothic Light BT" size="16.0" />
+            <Font name="Bank Gothic Light BT" size="18.0" />
+         </font>
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" blue="0.9843137264251709" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color green="1.0" blue="0.0941176488995552" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill></Text>
+      <Text fx:id="nameText" fill="WHITE" layoutX="14.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="228.0">
+         <font>
+            <Font name="Bank Gothic Light BT" size="28.0" />
+         </font>
+      </Text>
+      <Text fx:id="scoreText" fill="WHITE" layoutX="525.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="151.0">
+         <font>
+            <Font name="Bank Gothic Light BT" size="50.0" />
          </font></Text>
    </children>
 </AnchorPane>

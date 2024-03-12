@@ -5,45 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5285a866-9da5-4425-89e5-5948c9583a51" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/maven-metadata.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/maven-metadata.xml.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/maven-metadata.xml.sha1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/maven-metadata.xml.sha256" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/maven-metadata.xml.sha512" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/scorebord-1.0-20240306.150618-1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/scorebord-1.0-20240306.150618-1.jar.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/scorebord-1.0-20240306.150618-1.jar.sha1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/scorebord-1.0-20240306.150618-1.jar.sha256" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/scorebord-1.0-20240306.150618-1.jar.sha512" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/scorebord-1.0-20240306.150618-1.module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/scorebord-1.0-20240306.150618-1.module.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/scorebord-1.0-20240306.150618-1.module.sha1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/scorebord-1.0-20240306.150618-1.module.sha256" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/scorebord-1.0-20240306.150618-1.module.sha512" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/scorebord-1.0-20240306.150618-1.pom" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/scorebord-1.0-20240306.150618-1.pom.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/scorebord-1.0-20240306.150618-1.pom.sha1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/scorebord-1.0-20240306.150618-1.pom.sha256" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/1.0-SNAPSHOT/scorebord-1.0-20240306.150618-1.pom.sha512" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/maven-metadata.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/maven-metadata.xml.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/maven-metadata.xml.sha1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/maven-metadata.xml.sha256" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/scorebord/maven-metadata.xml.sha512" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/CandycrushApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/CandycrushController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candycrush.java" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/CandycrushApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/CandycrushApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/CandycrushController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/CandycrushController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/be/kuleuven/candycrush/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/be/kuleuven/candycrush/candycrush-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/be/kuleuven/candycrush/candycrush-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/be/kuleuven/candycrush/candycrush-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/be/kuleuven/candycrush/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/be/kuleuven/candycrush/login-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -151,7 +122,7 @@
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/MSI-Gamer/Desktop/School/BACH 1/SEM1/Software-ontwerp in Java/SukruSaygiliKieranGysbrechtsHasanSarikaya/SukruSaygiliKieranGysbrechtsHasanSarikaya",
+    "last_opened_file_path": "C:/Users/MSI-Gamer/Downloads/CandycrushJavaFXstartProject/candycrush",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -171,6 +142,9 @@
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MSI-Gamer\Desktop\SES-OpdrachtenDeel1\candycrush\src\main\resources\Afbeeldingen" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="be.kuleuven.candycrush.model" />
     </key>
@@ -181,7 +155,7 @@
       <module name="candycrush.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="be.kuleuven.candycrush.*" />
+          <option name="PATTERN" value="be.kuleuven.candycrush.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -312,11 +286,24 @@
       <workItem from="1709921354424" duration="854000" />
       <workItem from="1710006090529" duration="5785000" />
       <workItem from="1710056933083" duration="30635000" />
+      <workItem from="1710215119790" duration="8587000" />
+      <workItem from="1710247377503" duration="12951000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
