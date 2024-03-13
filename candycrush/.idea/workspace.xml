@@ -5,16 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5285a866-9da5-4425-89e5-5948c9583a51" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/CandycrushApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/CandycrushApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/CandycrushController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/CandycrushController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/LoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/be/kuleuven/candycrush/candycrush-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/be/kuleuven/candycrush/candycrush-view.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/be/kuleuven/candycrush/login-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/be/kuleuven/candycrush/login-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +123,7 @@
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.5482759",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -149,7 +141,7 @@
       <recent name="be.kuleuven.candycrush.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CandycrushApplication">
+  <component name="RunManager" selected="Gradle.CandycrushModelTests">
     <configuration name="CandycrushApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="be.kuleuven.candycrush.CandycrushApplication" />
       <module name="candycrush.main" />
@@ -257,10 +249,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.CandycrushModelTests" />
         <item itemvalue="Gradle.candycrush [test]" />
         <item itemvalue="Gradle.candycrush [run]" />
         <item itemvalue="Application.CandycrushApplication" />
-        <item itemvalue="Gradle.CandycrushModelTests" />
         <item itemvalue="Gradle.CandycrushModelTests.gegevenEenModelMetDeAanpasbareConstructorDusWidhtEnHeightOpgegeven_GettersGevenHetJuisteResultaatTerug" />
       </list>
     </recent_temporary>
@@ -288,6 +280,8 @@
       <workItem from="1710056933083" duration="30635000" />
       <workItem from="1710215119790" duration="8587000" />
       <workItem from="1710247377503" duration="12951000" />
+      <workItem from="1710309825770" duration="43000" />
+      <workItem from="1710335803140" duration="793000" />
     </task>
     <servers />
   </component>

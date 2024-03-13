@@ -11,8 +11,12 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
-    maven {
+    /*maven {
         url = "C:\\Users\\MSI-Gamer\\Desktop\\SES-OpdrachtenDeel1\\candycrush\\libs"
+    }*/
+
+    flatDir{
+        dirs("libs")
     }
 }
 
