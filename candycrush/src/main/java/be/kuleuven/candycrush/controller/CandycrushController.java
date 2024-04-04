@@ -16,15 +16,9 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.Objects;
-import java.util.ResourceBundle;
 
 public class CandycrushController {
-    @FXML
-    private ResourceBundle resources;
-    @FXML
-    private URL location;
     @FXML
     private AnchorPane motherPanel, gamePanel, backgroundImage;
     @FXML
@@ -76,8 +70,7 @@ public class CandycrushController {
     }
 
     public void candyTouch(MouseEvent me) {
-        int candyIndex = view.getIndexOfClicked(me);
-        model.updateCandySelected(candyIndex);
+        model.updateCandySelected(view.getPosOfClicked(me));
         update();
         System.out.println(player.getName());
         System.out.println(model.getPlayer().getScore());
@@ -91,11 +84,8 @@ public class CandycrushController {
             stage.setScene(scene);
             stage.setFullScreen(false);
             stage.show();
-            //stop intro liedje
-            //view.Stopliedje();
         }
-        catch (IOException e) {
-            // er gebeurt niks, error notification is ook overbodig
+        catch (IOException ignored) {
         }
     }
 

@@ -5,8 +5,67 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5285a866-9da5-4425-89e5-5948c9583a51" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Candy_Crush_spelregels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Candy_Crush_spelregels.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/src/main/java/be/kuleuven/CheckNeighboursInGrid.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/src/main/java/be/kuleuven/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/src/main/java/module-info.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/Opdracht5CheckNeighboursInGrid-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-javadoc.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-javadoc.jar.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-javadoc.jar.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-javadoc.jar.sha256" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-javadoc.jar.sha512" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-sources.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-sources.jar.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-sources.jar.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-sources.jar.sha256" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-sources.jar.sha512" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.jar.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.jar.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.jar.sha256" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.jar.sha512" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.module.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.module.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.module.sha256" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.module.sha512" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.pom" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.pom.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.pom.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.pom.sha256" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.pom.sha512" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/maven-metadata.xml.sha256" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/maven-metadata.xml.sha512" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/maven-metadata.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/maven-metadata.xml.md5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/maven-metadata.xml.sha1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/maven-metadata.xml.sha256" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/maven-metadata.xml.sha512" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/CandycrushController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/CandycrushController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/LoginView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/CandycrushModelTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/CandycrushModelTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +119,9 @@
       <list>
         <option value="JUnit5 Test Class" />
         <option value="FxmlFile" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -82,51 +143,65 @@
   &quot;associatedIndex&quot;: 4
 }</component>
   <component name="ProjectId" id="2dPnC5mNiLdflxFOcwNjFfHuNYN" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Gradle.CandycrushModelTests.executor": "Run",
-    "Gradle.CandycrushModelTests.gegevenEenIndexEnGeenNEIGHBOURS_GeeftEenPrintEnStoptDeMethodeCandySelected.executor": "Run",
-    "Gradle.CandycrushModelTests.gegevenEenJuisteIndexCheckOfDeScoreJuistWordtGeupdate.executor": "Run",
-    "Gradle.CandycrushModelTests.gegevenEenJuisteIndexCheckOfDeScoreJuistWordtGeupdatet.executor": "Run",
-    "Gradle.CandycrushModelTests.gegevenEenJuisteIndexMetMinderDan3Neighbours_printThereAreNotEnoughNeighbourCandys.executor": "Run",
-    "Gradle.CandycrushModelTests.gegevenEenModelMetDeAanpasbareConstructorDusWidhtEnHeightOpgegeven_GettersGevenHetJuisteResultaatTerug.executor": "Run",
-    "Gradle.CandycrushModelTests.gegevenEenRijEnKolomAllebeiEenRandomWaardeBuitenHetBereik_BerekenDeIndex_GeeftNulEnPrintOutOfRange.executor": "Run",
-    "Gradle.CandycrushModelTests.gegevenEenRijEnKolomEenVanDeTweeBuitenHetBereik_BerekenDeIndex_GeeftNulEnPrintOutOfRange.executor": "Run",
-    "Gradle.CandycrushModelTests.gegevenEenRijEnKolom_BerekenDeIndex.executor": "Run",
-    "Gradle.CandycrushModelTests.gegevenNegatieveIndex_GeeftEenPrintEnStoptDeMethodeupdateCandySelected.executor": "Run",
-    "Gradle.CandycrushModelTests.gegevenNieuwePlayerMetNaam_GeeftNaamTerugInCandycrushmodelKlasse.executor": "Run",
-    "Gradle.CandycrushModelTests.gegevenNieuwePlayerMetScore_GeeftScoreTerugInCandycrushmodelKlasse_GelijkAanNul.executor": "Run",
-    "Gradle.CandycrushModelTests.gegevenNieuwePlayerMetScore_GeeftScoreTerug_GelijkAanNul.executor": "Run",
-    "Gradle.Upgrade Gradle wrapper.executor": "Run",
-    "Gradle.candycrush [:CandycrushApplication.main()].executor": "Run",
-    "Gradle.candycrush [help].executor": "Run",
-    "Gradle.candycrush [run].executor": "Run",
-    "Gradle.candycrush [test].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/MSI-Gamer/Downloads/CandycrushJavaFXstartProject/candycrush",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.5482759",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;Gradle.BoardSizeTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.BoardSizeTest.geeftEenLegeLijstTerugWanneerBoardSizeOngeldigIs.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CandycrushModelTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CandycrushModelTests.gegevenEenIndexEnGeenNEIGHBOURS_GeeftEenPrintEnStoptDeMethodeCandySelected.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CandycrushModelTests.gegevenEenJuisteIndexCheckOfDeScoreJuistWordtGeupdate.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CandycrushModelTests.gegevenEenJuisteIndexCheckOfDeScoreJuistWordtGeupdatet.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CandycrushModelTests.gegevenEenJuisteIndexMetMinderDan3Neighbours_printThereAreNotEnoughNeighbourCandys.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CandycrushModelTests.gegevenEenModelMetDeAanpasbareConstructorDusWidhtEnHeightOpgegeven_GettersGevenHetJuisteResultaatTerug.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CandycrushModelTests.gegevenEenRijEnKolomAllebeiEenRandomWaardeBuitenHetBereik_BerekenDeIndex_GeeftNulEnPrintOutOfRange.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CandycrushModelTests.gegevenEenRijEnKolomEenVanDeTweeBuitenHetBereik_BerekenDeIndex_GeeftNulEnPrintOutOfRange.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CandycrushModelTests.gegevenEenRijEnKolom_BerekenDeIndex.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CandycrushModelTests.gegevenNegatieveIndex_GeeftEenPrintEnStoptDeMethodeupdateCandySelected.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CandycrushModelTests.gegevenNieuwePlayerMetNaam_GeeftNaamTerugInCandycrushmodelKlasse.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CandycrushModelTests.gegevenNieuwePlayerMetScore_GeeftScoreTerugInCandycrushmodelKlasse_GelijkAanNul.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.CandycrushModelTests.gegevenNieuwePlayerMetScore_GeeftScoreTerug_GelijkAanNul.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PositionTests.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PositionTests.gegevenEenBoardSizeEnPositie_InHetLinkerhoek_GeeftJuisteDirecteBurenTerug.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PositionTests.gegevenEenBoardSizeEnPositie_InHetMidden_GeeftJuisteDirecteBurenTerug.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PositionTests.gegevenEenBoardSizeEnPositie_RechterKantInHetMidden_GeeftJuisteDirecteBurenTerug.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PositionTests.gegevenEenIndexBinnenHetBereik_geeftEenPositieTerug.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PositionTests.gegevenEenOngeldigeIndex_geeftException.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PositionTests.gegevenEenPositieDieHetLaatsteElementInDeRijIs_GeeftTrue.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PositionTests.gegevenEenRijEnKolomnummer_geeft_OvereenkomstigIndexTerug.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Upgrade Gradle wrapper.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.candycrush [:CandycrushApplication.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.candycrush [:CandycrushModel.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.candycrush [help].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.candycrush [run].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.candycrush [test].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/MSI-Gamer/Desktop/SES-OpdrachtenDeel1/candycrush&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.5482759&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\MSI-Gamer\Desktop\SES-OpdrachtenDeel1\candycrush\libs" />
@@ -141,19 +216,43 @@
       <recent name="be.kuleuven.candycrush.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CandycrushModelTests">
+  <component name="RunManager" selected="Application.CandycrushApplication">
     <configuration name="CandycrushApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="be.kuleuven.candycrush.CandycrushApplication" />
       <module name="candycrush.main" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="be.kuleuven.candycrush.controller.*" />
+          <option name="PATTERN" value="be.kuleuven.candycrush.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="BoardSizeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;be.kuleuven.candycrush.model.BoardSizeTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
     </configuration>
     <configuration name="CandycrushModelTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -203,56 +302,36 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="candycrush [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PositionTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="run" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;be.kuleuven.candycrush.model.PositionTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="candycrush [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CandycrushModelTests" />
-        <item itemvalue="Gradle.candycrush [test]" />
-        <item itemvalue="Gradle.candycrush [run]" />
         <item itemvalue="Application.CandycrushApplication" />
+        <item itemvalue="Gradle.PositionTests" />
+        <item itemvalue="Gradle.BoardSizeTest" />
+        <item itemvalue="Gradle.CandycrushModelTests" />
         <item itemvalue="Gradle.CandycrushModelTests.gegevenEenModelMetDeAanpasbareConstructorDusWidhtEnHeightOpgegeven_GettersGevenHetJuisteResultaatTerug" />
       </list>
     </recent_temporary>
@@ -282,6 +361,14 @@
       <workItem from="1710247377503" duration="12951000" />
       <workItem from="1710309825770" duration="43000" />
       <workItem from="1710335803140" duration="793000" />
+      <workItem from="1710520827183" duration="466000" />
+      <workItem from="1710771923822" duration="36000" />
+      <workItem from="1712144208947" duration="123000" />
+      <workItem from="1712147523880" duration="7805000" />
+      <workItem from="1712156985067" duration="1902000" />
+      <workItem from="1712209745172" duration="23924000" />
+      <workItem from="1712238769061" duration="147000" />
+      <workItem from="1712239011846" duration="53000" />
     </task>
     <servers />
   </component>

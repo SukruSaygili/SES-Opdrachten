@@ -1,37 +1,32 @@
 package be.kuleuven.candycrush.model;
 
-import be.kuleuven.CheckNeighboursInGrid;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
 
 public class CandycrushModel {
     /*variables*/
-    private int width, height;
-    private final int lowerLimitAmountOfcandys = 3;
-    private final int upperBoundTypesOfCandys = 5, lowerBoundTypesOfCandys = 1;
+    private final BoardSize bs;
+    private final int lowerLimitAmountOfNeighbourcandys = 3;
     private Player player;
-    private ArrayList<Integer> playground;
+    private ArrayList<Candy> playground;
 
 
     /*constructors*/
     //customizable constructor
-    public CandycrushModel(Player player, int width, int height) {
+    public CandycrushModel(Player player, BoardSize bs) {
         this.player = player;
         this.playground = new ArrayList<>();
-        this.width = width;
-        this.height = height;
+        this.bs = bs;
 
-        int amountOfCandys = this.width * this.height;
+        int amountOfCandys = bs.width() * bs.height();
         for (int i = 0; i < amountOfCandys; i++) {
-            Random rand = new Random();
-            int randomNr = rand.nextInt(upperBoundTypesOfCandys) + lowerBoundTypesOfCandys;
-            playground.add(randomNr);
+            playground.add(generateRandomCandy());
         }
     }
     //default for a standard game (overload)
     public CandycrushModel(Player player) {
-        this(player, 9, 9);
+        this(player, new BoardSize(9,9));
     }
 
     /*main method*/
@@ -39,13 +34,12 @@ public class CandycrushModel {
         Player player1 = new Player("sukru");
         CandycrushModel model = new CandycrushModel(player1);
         int i = 1;
-        Iterator<Integer> iter = model.getPlayground().iterator();
+        Iterator<Candy> iter = model.getPlayground().iterator();
         while (iter.hasNext()) {
+            Candy c = iter.next();
+            System.out.print(c);
 
-            int candy = iter.next();
-            System.out.print(candy);
-
-            if ((i % model.getWidth()) == 0) {
+            if ((i % model.getBs().width()) == 0) {
                 System.out.print("\n");
                 i = 1;
             }
@@ -55,30 +49,18 @@ public class CandycrushModel {
     }
 
     /*getters*/
-    public int getWidth() {
-        return width;
-    }
-    public int getHeight() {
-        return height;
+    public BoardSize getBs() {
+        return bs;
     }
     public Player getPlayer() {
         return player;
     }
-    public ArrayList<Integer> getPlayground() {
+    public ArrayList<Candy> getPlayground() {
         return playground;
-    }
-    public int getIndexFromRowColumn(int column, int row) {     //row en column: beginnen vanaf 0
-        if (column < this.width && row < this.height) {
-            return column + row*width;
-        }
-        else {
-            System.out.println("Column or row, or both are out of range!");
-            return -1;
-        }
     }
 
     /*setters*/
-    public void setPlayground(ArrayList<Integer> nPlayground) {     //to test the updateCandySelected Method
+    public void setPlayground(ArrayList<Candy> nPlayground) {     //to test the updateCandySelected Method
         this.playground = nPlayground;
     }
     public void setPlayer(Player player) {
@@ -86,41 +68,32 @@ public class CandycrushModel {
     }
 
     /*other methods*/
-    public void updateCandySelected(int index) {
-        if (index < 0 || index >= playground.size()) {
-            System.out.println("model:candyWithIndexSelected:indexOutOfRange");
-            return;
+    public void updateCandySelected(Position pos) {
+        Iterable<Position> neighboursIterable = getSameNeighbourPositions(pos);
+        Iterator<Position> sameNeighbours = neighboursIterable.iterator();
+
+        int amountOfSameNeighbours = 0;
+        while (sameNeighbours.hasNext()) {
+            sameNeighbours.next();
+            amountOfSameNeighbours++;
         }
 
-        Iterable<Integer> neighboursIterable = CheckNeighboursInGrid.getSameNeighboursIds(this.playground, this.width, this.height, index);
-
-        Iterator<Integer> neighbours = neighboursIterable.iterator();
-        int amountOfNeighbours = 0;
-        while (neighbours.hasNext()) {
-            neighbours.next();
-            amountOfNeighbours++;
-        }
-
-        if (amountOfNeighbours == 0) {
+        if (amountOfSameNeighbours == 0) {
             System.out.println("There are no neighbour candys!");
             return;
         }
 
-        if (amountOfNeighbours >= lowerLimitAmountOfcandys) {
+        if (amountOfSameNeighbours >= lowerLimitAmountOfNeighbourcandys) {
             //de index zelf updaten
-            Random random = new Random();
-            int randomGetal = random.nextInt(upperBoundTypesOfCandys) + lowerBoundTypesOfCandys;
-            playground.set(index, randomGetal);
+            playground.set(pos.toIndex(),generateRandomCandy());
 
             //buren updaten
-            neighbours = neighboursIterable.iterator();
-            Random rand = new Random();
-            while (neighbours.hasNext()) {
-                int randomNr = rand.nextInt(upperBoundTypesOfCandys) + lowerBoundTypesOfCandys;
-                int neighbourIndex = neighbours.next();
+            sameNeighbours = neighboursIterable.iterator();
+            while (sameNeighbours.hasNext()) {
+                int neighbourIndex = sameNeighbours.next().toIndex();
 
                 if (neighbourIndex >= 0 && neighbourIndex < playground.size()) {
-                    playground.set(neighbourIndex, randomNr);
+                    playground.set(neighbourIndex, generateRandomCandy());
                     player.setScore(player.getScore() + 1);
                 }
                 else {
@@ -133,6 +106,35 @@ public class CandycrushModel {
         else {
             System.out.println("There are not enough neighbour candys!");
         }
+    }
+    public Iterable<Position> getSameNeighbourPositions(Position position) {
+        Iterator<Position> neighboursPos = position.neighbourPositions().iterator();
+        ArrayList<Position> sameNeighboursPos = new ArrayList<>();
+
+        var candyOnPosition = playground.get(position.toIndex());
+
+        while(neighboursPos.hasNext()) {
+            var neighbourPos = neighboursPos.next();
+            var candyOnNeighbourPos = playground.get(neighbourPos.toIndex());
+
+            if(candyOnPosition.equals(candyOnNeighbourPos)) {
+                sameNeighboursPos.add(neighbourPos);
+            }
+        }
+        return sameNeighboursPos;
+    }
+    public Candy generateRandomCandy() {
+        Random random = new Random();
+        int candy = random.nextInt(10);
+        //Indien zonder kansen, een normale candy komt vrij weinig voor wat niet logisch is
+        return switch (candy) {
+            case 0, 1, 2, 3, 4, 5 -> new NormalCandy(random.nextInt(4)); //60% kans voor NormalCandy
+            case 6 -> new AllesGrezend();                                       //10% kans voor AllesGrezend
+            case 7 -> new OnderVolledig();                                      //10% kans voor OnderVolledig
+            case 8 -> new DubbelPunt();                                         //10% kans voor DubbelPunt
+            case 9 -> new RandomBom();                                          //10% kans voor RandomBom
+            default -> null;
+        };
     }
 }
 

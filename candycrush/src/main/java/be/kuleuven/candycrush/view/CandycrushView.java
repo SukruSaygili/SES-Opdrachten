@@ -1,6 +1,7 @@
 package be.kuleuven.candycrush.view;
 
-import be.kuleuven.candycrush.model.CandycrushModel;
+import be.kuleuven.candycrush.model.*;
+import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -16,16 +17,13 @@ import java.util.Iterator;
 public class CandycrushView extends Region {
     /*variables*/
     private CandycrushModel model;
-    private int widthCandy, heigthCandy, radiusCandy;
+    private final int widthCandyPlate = 50, heigthCandyPlate = 50, radiusCandy = 15;
     private AnchorPane gameBackground;
 
 
     /*constructor*/
     public CandycrushView(CandycrushModel model) {
         this.model = model;
-        widthCandy = 50;
-        heigthCandy = 50;
-        radiusCandy = 15;
         this.update();
         this.setGameBackground();
     }
@@ -34,18 +32,16 @@ public class CandycrushView extends Region {
     public AnchorPane getGameBackground() {
         return gameBackground;
     }
-    public int getIndexOfClicked(MouseEvent me){
-        int index = -1;
+    public Position getPosOfClicked(MouseEvent me){
+        int row = (int) me.getY()/ heigthCandyPlate;
+        int column = (int) me.getX()/ widthCandyPlate;
+        Position posOfClicked = new Position(row,column,model.getBs());
 
-        int row = (int) me.getY()/heigthCandy;
-        int column = (int) me.getX()/widthCandy;
+        System.out.println("x: "+me.getX()+"\ny: "+me.getY()+"\nrow: "+row+"\ncolumn: "+column);
 
-        System.out.println("x: "+me.getX()+"\ny: "+me.getY()+"\nrow: "+row+"\ncolum: "+column);
+        System.out.println("position of clicked: " + posOfClicked.toString());
 
-        index = model.getIndexFromRowColumn(column,row);
-        System.out.println("index of clicked: " + index);
-
-        return index;
+        return posOfClicked;
     }
 
     /*setters*/
@@ -55,6 +51,7 @@ public class CandycrushView extends Region {
         achtergrond.setStroke(new Color(1f,0,0,0));
         gameBackground.getChildren().addAll(achtergrond);
         URL imgURL = getClass().getResource("/Afbeeldingen/GameAchtergrond.gif");
+        assert imgURL != null;
         Image picture = new Image(imgURL.toString());
         ImagePattern pattern = new ImagePattern(picture);
         achtergrond.setFill(pattern);
@@ -63,57 +60,80 @@ public class CandycrushView extends Region {
     /*other methods*/
     public void update() {
         getChildren().clear();
-        int xCoordinateITER = 0, yCoordinateITER = 0;       //positive direction of y toward the bottom
-        Iterator<Integer> candys = model.getPlayground().iterator();
+        int xPosITER = 0, yPosITER = 0;       //positive direction of y toward the bottom
+
+        Iterator<Candy> candys = model.getPlayground().iterator();
         while(candys.hasNext()) {
-            int candy = candys.next();
-            Rectangle candyPlate = new Rectangle(xCoordinateITER*widthCandy, yCoordinateITER*heigthCandy,widthCandy,heigthCandy);
+            var iterPos = new Position(yPosITER,xPosITER,model.getBs());
+
+            Rectangle candyPlate = new Rectangle(iterPos.columnNr() * widthCandyPlate, iterPos.rowNr() * heigthCandyPlate,
+                    widthCandyPlate, heigthCandyPlate);
+
             candyPlate.setFill(Color.TRANSPARENT);
             candyPlate.setStroke(Color.LIGHTGRAY);
 
-            Circle c = candyCircle(candy);
-            //Text candyNumber = new Text("" + candy);
-            //double xCoordinateCandy = candyPlate.getX() + (candyPlate.getWidth() - candyNumber.getBoundsInLocal().getWidth()) / 2;
-            //double yCoordinateCandy = candyPlate.getY() + (candyPlate.getHeight() + candyNumber.getBoundsInLocal().getHeight()) / 2;
-            //candyNumber.setX(xCoordinateCandy); candyNumber.setY(yCoordinateCandy);
-            double xCoordinateCandy = candyPlate.getX() + candyPlate.getWidth() / 2;
-            double yCoordinateCandy = candyPlate.getY() + candyPlate.getHeight() / 2;
-            c.setCenterX(xCoordinateCandy); c.setCenterY(yCoordinateCandy);
+            var candy = makeCandyShape(iterPos,candys.next());
 
-            getChildren().addAll(candyPlate,c);
+            getChildren().addAll(candyPlate,candy);
 
-            if(xCoordinateITER == model.getWidth() - 1) {
-                xCoordinateITER  = 0;
-                yCoordinateITER++;
+            if(xPosITER == model.getBs().width() - 1) {
+                xPosITER  = 0;
+                yPosITER++;
             }
             else {
-                xCoordinateITER ++;
+                xPosITER ++;
             }
         }
     }
 
-    //methode die een cirkel creert afhankelijk van het number van de 'candy'
-    private Circle candyCircle(int number) {
-        Circle c = new Circle(radiusCandy);
+    //methode die een cirkel creert afhankelijk van het nummer van de 'candy' op een bepaalde x en y coordinaat
+    private Circle candyCircle(double x, double y, int number) {
+        Circle c = new Circle(x, y, radiusCandy);
 
         switch (number) {
-            case 1:
+            case 0:
                 c.setFill(Color.RED);
                 break;
-            case 2:
+            case 1:
                 c.setFill(Color.ORANGE);
                 break;
-            case 3:
+            case 2:
                 c.setFill(Color.YELLOW);
                 break;
-            case 4:
+            case 3:
                 c.setFill(Color.GREEN);
                 break;
-            case 5:
-                c.setFill(Color.BLUE);
-                break;
+            default:
+                throw new IllegalArgumentException("Unknow colornumber!");
         }
         return c;
     }
-
+    private Node makeCandyShape(Position position, Candy candy) {
+        double xCircle = position.columnNr() * widthCandyPlate + ((double) widthCandyPlate /2);
+        double yCircle = position.rowNr() * heigthCandyPlate + ((double) heigthCandyPlate /2);
+        double xRectangle = xCircle - (double) radiusCandy;     //linkerbovenhoek vierkant
+        double yRectangle = yCircle - (double) radiusCandy;     //linkerbovenhoek vierkant
+        Rectangle specialCandy = new Rectangle(xRectangle, yRectangle, radiusCandy*2,radiusCandy*2);
+        //yield: blokcode voor switch-expressie, daarom
+        return switch(candy) {
+            case NormalCandy(int color) -> candyCircle(xCircle,yCircle,color);
+            case OnderVolledig() -> {
+                specialCandy.setFill(Color.CYAN);
+                yield specialCandy;
+            }
+            case AllesGrezend() -> {
+                specialCandy.setFill(Color.BLUEVIOLET);
+                yield specialCandy;
+            }
+            case DubbelPunt() -> {
+                specialCandy.setFill(Color.DARKGOLDENROD);
+                yield specialCandy;
+            }
+            case RandomBom() -> {
+                specialCandy.setFill(Color.FUCHSIA);
+                yield specialCandy;
+            }
+            default -> throw new IllegalArgumentException("Unkown candy!");
+        };
+    }
 }

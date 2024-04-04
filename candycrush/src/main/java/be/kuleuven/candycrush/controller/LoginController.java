@@ -14,14 +14,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class LoginController {
-    @FXML
-    private ResourceBundle resources;
-    @FXML
-    private URL location;
     @FXML
     private AnchorPane background;
     @FXML
@@ -35,7 +29,6 @@ public class LoginController {
     //scenewissel
     private Stage stage;
     private Scene scene;
-    private Parent root;
 
     @FXML
     void initialize() {
@@ -68,9 +61,8 @@ public class LoginController {
             stage.show();
             player.setName(name.getText());
 
-            // stop intro liedje
-            // view.Stopliedje();
-        } catch (IOException e) {
+        }
+        catch (IOException e) {
             e.printStackTrace();
         }
     }

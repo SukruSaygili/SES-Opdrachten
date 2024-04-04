@@ -6,7 +6,6 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -42,55 +41,40 @@ public class CandycrushModelTests {
     }
 
     @Test
-    public void gegevenNegatieveIndex_GeeftEenPrintEnStoptDeMethodeupdateCandySelected() {
-        //Arrange
-        Player player1 = new Player("sukru");
-        CandycrushModel cm = new CandycrushModel(player1);
-        ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outputStreamCaptor));
-
-        //Act
-        cm.updateCandySelected(-5);
-
-        //Assert
-        Assertions.assertThat(outputStreamCaptor.toString().trim()).isEqualTo("model:candyWithIndexSelected:indexOutOfRange");
-        //trim() => alle whitespace voor en achter weg te halen, zodat enkel de desbetreffende output wordt getest
-    }
-
-    @Test
     public void gegevenEenIndexEnGeenNEIGHBOURS_GeeftEenPrintEnStoptDeMethodeCandySelected() {
         // Arrange
         Player player1 = new Player("sukru");
-        CandycrushModel cm = new CandycrushModel(player1);
+        CandycrushModel cm = new CandycrushModel(player1,new BoardSize(2,2));
         ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStreamCaptor));
 
         // Act
-        ArrayList<Integer> nPlayground = new ArrayList<>();     //zorgen voor geen neighbours
-        for (int i = 0; i < (cm.getWidth() * cm.getHeight()); i++) {
-            nPlayground.add(i);
-        }
+        //zorgen voor geen neighbours
+        ArrayList<Candy> nPlayground = new ArrayList<>(
+                List.of(new NormalCandy(2), new DubbelPunt(), new OnderVolledig(), new RandomBom()));
         cm.setPlayground(nPlayground);
-        cm.updateCandySelected(2);
+        cm.updateCandySelected(new Position(0,0,cm.getBs()));
 
         // Assert
         String actual = outputStreamCaptor.toString().trim().replace("\r\n", "\n"); //dit heeft te maken met de whitespace tussening beide printstatements
-        assertThat(actual).isEqualTo("[]\nThere are no neighbour candys!");      //de haken komen van de checkNeighboursIds methode en daarom zet ik die er ook bij
+        assertThat(actual).isEqualTo("There are no neighbour candys!");      //de haken komen van de checkNeighboursIds methode en daarom zet ik die er ook bij
     }
 
     @Test
     public void gegevenEenJuisteIndexCheckOfDeScoreJuistWordtGeupdatet() {
         // Arrange
         Player player1 = new Player("sukru");
-        CandycrushModel cm = new CandycrushModel(player1,3,3);
+        CandycrushModel cm = new CandycrushModel(player1,new BoardSize(3,3));
 
         //Act
-        ArrayList<Integer> playgroundWithNeighbours = new ArrayList<>();
-        Collections.addAll(playgroundWithNeighbours, 1,3,5,
-                                                               4,3,6,
-                                                               3,3,3);
+        ArrayList<Candy> playgroundWithNeighbours = new ArrayList<>();
+        Collections.addAll(playgroundWithNeighbours,
+                new NormalCandy(1),new NormalCandy(3), new NormalCandy(0),
+                new NormalCandy(2),new NormalCandy(3),new NormalCandy(0),
+                new NormalCandy(3),new NormalCandy(3),new NormalCandy(3));
+
         cm.setPlayground(playgroundWithNeighbours);
-        cm.updateCandySelected(4);
+        cm.updateCandySelected(new Position(1,1,cm.getBs()));
 
         //Assert
         assertThat(cm.getPlayer().getScore()).isEqualTo(5);
@@ -100,77 +84,33 @@ public class CandycrushModelTests {
     public void gegevenEenJuisteIndexMetMinderDan3Neighbours_printThereAreNotEnoughNeighbourCandys() {
         // Arrange
         Player player1 = new Player("sukru");
-        CandycrushModel cm = new CandycrushModel(player1,3,3);
+        CandycrushModel cm = new CandycrushModel(player1,new BoardSize(3,3));
         ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
         System.setOut(new PrintStream(outputStreamCaptor));
 
         //Act
-        ArrayList<Integer> playgroundWithNeighbours = new ArrayList<>();
-        Collections.addAll(playgroundWithNeighbours, 1,3,5,
-                                                               4,3,6,
-                                                               3,2,1);
+        ArrayList<Candy> playgroundWithNeighbours = new ArrayList<>();
+        Collections.addAll(playgroundWithNeighbours,
+                new NormalCandy(1),new NormalCandy(1), new NormalCandy(0),
+                new NormalCandy(2),new NormalCandy(3),new NormalCandy(0),
+                new NormalCandy(3),new NormalCandy(0),new NormalCandy(3));
         cm.setPlayground(playgroundWithNeighbours);
-        cm.updateCandySelected(4);
+        cm.updateCandySelected(new Position(1,1,cm.getBs()));
 
         //Assert
         String actual = outputStreamCaptor.toString().trim().replace("\r\n", "\n"); //dit heeft te maken met de whitespace tussening beide printstatements
-        assertThat(actual).isEqualTo("[6, 1]\nThere are not enough neighbour candys!");      //de haken met de indexen komen van de checkNeighboursIds methode en daarom zet ik die er ook bij
-    }
-
-    @Test
-    public void gegevenEenRijEnKolomAllebeiEenRandomWaardeBinneninHetBereik_BerekenDeIndex() {
-        // Arrange
-        Player player1 = new Player("sukru");
-        CandycrushModel cm = new CandycrushModel(player1);
-
-        //Act
-        int index = cm.getIndexFromRowColumn(2,3);
-
-        //Assert
-        assertThat(index).isEqualTo(29);
-    }
-
-    @Test
-    public void gegevenEenRijEnKolomAllebeiEenRandomWaardeBuitenHetBereik_BerekenDeIndex_GeeftNulEnPrintOutOfRange() {
-        // Arrange
-        Player player1 = new Player("sukru");
-        CandycrushModel cm = new CandycrushModel(player1);
-        ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outputStreamCaptor));
-
-        //Act
-        int index = cm.getIndexFromRowColumn(200,215);
-
-        //Assert
-        assertThat(outputStreamCaptor.toString().trim()).isEqualTo("Column or row, or both are out of range!");
-        assertThat(index).isEqualTo(-1);
-    }
-
-    @Test
-    public void gegevenEenRijEnKolomEenVanDeTweeBuitenHetBereik_BerekenDeIndex_GeeftNulEnPrintOutOfRange() {
-        // Arrange
-        Player player1 = new Player("sukru");
-        CandycrushModel cm = new CandycrushModel(player1);
-        ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(outputStreamCaptor));
-
-        //Act
-        int index = cm.getIndexFromRowColumn(2,215);
-
-        //Assert
-        assertThat(outputStreamCaptor.toString().trim()).isEqualTo("Column or row, or both are out of range!");
-        assertThat(index).isEqualTo(-1);
+        assertThat(actual).isEqualTo("There are not enough neighbour candys!");      //de haken met de indexen komen van de checkNeighboursIds methode en daarom zet ik die er ook bij
     }
 
     @Test
     public void gegevenEenModelMetDeAanpasbareConstructorDusWidhtEnHeightOpgegeven_GettersGevenHetJuisteResultaatTerug() {
         //Arrange
         Player player1 = new Player("sukru");
-        CandycrushModel cm = new CandycrushModel(player1,200,60);
+        CandycrushModel cm = new CandycrushModel(player1,new BoardSize(200,60));
 
         //Act
-        int actualWidth = cm.getWidth();
-        int actualHeight = cm.getHeight();
+        int actualWidth = cm.getBs().width();
+        int actualHeight = cm.getBs().height();
 
         //Assert
         assertThat(actualWidth).isEqualTo(200);

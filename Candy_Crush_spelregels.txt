@@ -18,7 +18,7 @@ Het doel van Candy Crush is om zoveel mogelijk punten te behalen door het matche
 *** OnderVolledig: Wanneer je een rij van minstens 3 snoepjes maakt, wordt ook de volledige onderste rij verwijderd.  
 *** AllesGrezend: Wanneer je een rij van minstens 3 snoepjes maakt, worden ook alle andere snoepje die aan de rij grenzen verwijderd. 
 *** DubbelPunt: Deze snoepjes zijn dubbele punten waard. 
-*** 3Zetter: Wanneer je een rij van minstens 3 snoepjes maakt, krijg je 3 extra zetten. 
+*** RandomBom: Wanneer je een rij van minstens 3 snoepjes maakt, vindt er een 'ontploffing' plaats die random candys in het speelveld verwijderd. 
  
 4. Puntentelling en einde spel: 
 - Elke snoepje in een verwijderde rij levert evenveel punten op als het aantal snoepjes dat verwijderd worden. 

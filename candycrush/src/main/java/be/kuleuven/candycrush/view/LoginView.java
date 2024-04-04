@@ -36,12 +36,14 @@ public class LoginView extends Region {
         backgroundLogin.getChildren().addAll(figuur1,figuur2);
 
         URL imgURL = getClass().getResource("/Afbeeldingen/LoginAchtergrond.jpg");
+        assert imgURL != null;
         Image picture = new Image(imgURL.toString());
         ImagePattern pattern = new ImagePattern(picture);
 
         figuur1.setFill(pattern);
 
         URL imgURL2 = getClass().getResource("/Afbeeldingen/NameGIF.gif");
+        assert imgURL2 != null;
         Image picture2 = new Image(imgURL2.toString());
         ImagePattern pattern2 = new ImagePattern(picture2);
         figuur2.setFill(pattern2);
