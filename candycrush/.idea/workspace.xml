@@ -5,67 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5285a866-9da5-4425-89e5-5948c9583a51" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Candy_Crush_spelregels.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Candy_Crush_spelregels.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/src/main/java/be/kuleuven/CheckNeighboursInGrid.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/src/main/java/be/kuleuven/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Opdracht5CheckNeighboursInGrid/src/main/java/module-info.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/Opdracht5CheckNeighboursInGrid-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-javadoc.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-javadoc.jar.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-javadoc.jar.sha1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-javadoc.jar.sha256" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-javadoc.jar.sha512" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-sources.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-sources.jar.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-sources.jar.sha1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-sources.jar.sha256" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1-sources.jar.sha512" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.jar.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.jar.sha1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.jar.sha256" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.jar.sha512" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.module" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.module.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.module.sha1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.module.sha256" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.module.sha512" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.pom" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.pom.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.pom.sha1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.pom.sha256" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/Opdracht5CheckNeighboursInGrid-1.0-20240310.163020-1.pom.sha512" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/maven-metadata.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/maven-metadata.xml.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/maven-metadata.xml.sha1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/maven-metadata.xml.sha256" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/1.0-SNAPSHOT/maven-metadata.xml.sha512" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/maven-metadata.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/maven-metadata.xml.md5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/maven-metadata.xml.sha1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/maven-metadata.xml.sha256" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/be/kuleuven/Opdracht5CheckNeighboursInGrid/maven-metadata.xml.sha512" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/CandycrushController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/CandycrushController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/LoginView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/LoginView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/CandycrushModelTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/CandycrushModelTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -369,6 +310,7 @@
       <workItem from="1712209745172" duration="23924000" />
       <workItem from="1712238769061" duration="147000" />
       <workItem from="1712239011846" duration="53000" />
+      <workItem from="1712472335460" duration="133000" />
     </task>
     <servers />
   </component>

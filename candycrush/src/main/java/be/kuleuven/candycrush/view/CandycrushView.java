@@ -76,7 +76,7 @@ public class CandycrushView extends Region {
 
             getChildren().addAll(candyPlate,candy);
 
-            if(xPosITER == model.getBs().width() - 1) {
+            if(iterPos.isLastColumn()) {
                 xPosITER  = 0;
                 yPosITER++;
             }
