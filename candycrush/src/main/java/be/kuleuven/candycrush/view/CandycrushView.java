@@ -1,6 +1,7 @@
 package be.kuleuven.candycrush.view;
 
 import be.kuleuven.candycrush.model.*;
+import be.kuleuven.candycrush.model.Candy.*;
 import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;

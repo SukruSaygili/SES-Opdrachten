@@ -1,4 +1,4 @@
-package be.kuleuven.candycrush.model;
+package be.kuleuven.candycrush.model.Candy;
 
 public record NormalCandy(int color) implements Candy {
     public NormalCandy{

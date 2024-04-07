@@ -5,8 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5285a866-9da5-4425-89e5-5948c9583a51" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/AllesGrezend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/AllesGrezend.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/Candy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/DubbelPunt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/DubbelPunt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/NormalCandy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/NormalCandy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/OnderVolledig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/OnderVolledig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/RandomBom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/RandomBom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/CandycrushModelTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/CandycrushModelTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -311,6 +318,7 @@
       <workItem from="1712238769061" duration="147000" />
       <workItem from="1712239011846" duration="53000" />
       <workItem from="1712472335460" duration="133000" />
+      <workItem from="1712472536871" duration="92000" />
     </task>
     <servers />
   </component>

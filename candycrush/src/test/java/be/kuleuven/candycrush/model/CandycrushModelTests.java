@@ -1,6 +1,6 @@
 package be.kuleuven.candycrush.model;
 import be.kuleuven.CheckNeighboursInGrid;
-import org.assertj.core.api.Assertions;
+import be.kuleuven.candycrush.model.Candy.*;
 import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;

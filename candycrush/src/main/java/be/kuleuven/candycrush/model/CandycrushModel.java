@@ -1,5 +1,7 @@
 package be.kuleuven.candycrush.model;
 
+import be.kuleuven.candycrush.model.Candy.*;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Random;
