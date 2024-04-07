@@ -13,7 +13,6 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 
 import java.net.URL;
-import java.util.Iterator;
 
 public class CandycrushView extends Region {
     /*variables*/
@@ -36,7 +35,7 @@ public class CandycrushView extends Region {
     public Position getPosOfClicked(MouseEvent me){
         int row = (int) me.getY()/ heigthCandyPlate;
         int column = (int) me.getX()/ widthCandyPlate;
-        Position posOfClicked = new Position(row,column,model.getBs());
+        Position posOfClicked = new Position(row,column,model.getBoard().getBs());
 
         System.out.println("x: "+me.getX()+"\ny: "+me.getY()+"\nrow: "+row+"\ncolumn: "+column);
 
@@ -63,9 +62,10 @@ public class CandycrushView extends Region {
         getChildren().clear();
         int xPosITER = 0, yPosITER = 0;       //positive direction of y toward the bottom
 
-        Iterator<Candy> candys = model.getPlayground().iterator();
+        var candys = model.getBoard().getPlayground().iterator();
+
         while(candys.hasNext()) {
-            var iterPos = new Position(yPosITER,xPosITER,model.getBs());
+            var iterPos = new Position(yPosITER,xPosITER,model.getBoard().getBs());
 
             Rectangle candyPlate = new Rectangle(iterPos.columnNr() * widthCandyPlate, iterPos.rowNr() * heigthCandyPlate,
                     widthCandyPlate, heigthCandyPlate);
@@ -134,7 +134,7 @@ public class CandycrushView extends Region {
                 specialCandy.setFill(Color.FUCHSIA);
                 yield specialCandy;
             }
-            default -> throw new IllegalArgumentException("Unkown candy!");
+            default -> throw new IllegalArgumentException("Unknown candy!");
         };
     }
 }

@@ -8,23 +8,17 @@ import java.util.Random;
 
 public class CandycrushModel {
     /*variables*/
-    private final BoardSize bs;
     private final int lowerLimitAmountOfNeighbourcandys = 3;
     private Player player;
-    private ArrayList<Candy> playground;
+    private Board<Candy> board;
 
 
     /*constructors*/
     //customizable constructor
     public CandycrushModel(Player player, BoardSize bs) {
         this.player = player;
-        this.playground = new ArrayList<>();
-        this.bs = bs;
-
-        int amountOfCandys = bs.width() * bs.height();
-        for (int i = 0; i < amountOfCandys; i++) {
-            playground.add(generateRandomCandy());
-        }
+        board = new Board<>(bs,new ArrayList<>());
+        board.fill(position -> generateRandomCandy());
     }
     //default for a standard game (overload)
     public CandycrushModel(Player player) {
@@ -36,12 +30,12 @@ public class CandycrushModel {
         Player player1 = new Player("sukru");
         CandycrushModel model = new CandycrushModel(player1);
         int i = 1;
-        Iterator<Candy> iter = model.getPlayground().iterator();
+        Iterator<Candy> iter = model.getBoard().getPlayground().iterator();
         while (iter.hasNext()) {
             Candy c = iter.next();
             System.out.print(c);
 
-            if ((i % model.getBs().width()) == 0) {
+            if ((i % model.getBoard().getBs().width()) == 0) {
                 System.out.print("\n");
                 i = 1;
             }
@@ -51,28 +45,22 @@ public class CandycrushModel {
     }
 
     /*getters*/
-    public BoardSize getBs() {
-        return bs;
+    public Board<Candy> getBoard() {
+        return board;
     }
     public Player getPlayer() {
         return player;
     }
-    public ArrayList<Candy> getPlayground() {
-        return playground;
-    }
 
     /*setters*/
-    public void setPlayground(ArrayList<Candy> nPlayground) {     //to test the updateCandySelected Method
-        this.playground = nPlayground;
-    }
     public void setPlayer(Player player) {
         this.player = player;
     }
 
     /*other methods*/
     public void updateCandySelected(Position pos) {
-        Iterable<Position> neighboursIterable = getSameNeighbourPositions(pos);
-        Iterator<Position> sameNeighbours = neighboursIterable.iterator();
+        var neighboursIterable = getSameNeighbourPositions(pos);
+        var sameNeighbours = neighboursIterable.iterator();
 
         int amountOfSameNeighbours = 0;
         while (sameNeighbours.hasNext()) {
@@ -87,20 +75,13 @@ public class CandycrushModel {
 
         if (amountOfSameNeighbours >= lowerLimitAmountOfNeighbourcandys) {
             //de index zelf updaten
-            playground.set(pos.toIndex(),generateRandomCandy());
+            board.replaceCellAt(pos,generateRandomCandy());
 
             //buren updaten
             sameNeighbours = neighboursIterable.iterator();
             while (sameNeighbours.hasNext()) {
-                int neighbourIndex = sameNeighbours.next().toIndex();
-
-                if (neighbourIndex >= 0 && neighbourIndex < playground.size()) {
-                    playground.set(neighbourIndex, generateRandomCandy());
-                    player.setScore(player.getScore() + 1);
-                }
-                else {
-                    System.out.println("model:candyWithIndexSelected:neighbourIndexOutOfRange");
-                }
+                board.replaceCellAt(sameNeighbours.next(),generateRandomCandy());
+                player.setScore(player.getScore() + 1);
             }
             player.setScore(player.getScore() + 1);     //+1, het snoepje zelf dat de buren heeft
             System.out.println(player.getName());
@@ -110,14 +91,14 @@ public class CandycrushModel {
         }
     }
     public Iterable<Position> getSameNeighbourPositions(Position position) {
-        Iterator<Position> neighboursPos = position.neighbourPositions().iterator();
-        ArrayList<Position> sameNeighboursPos = new ArrayList<>();
+        var neighboursPos = position.neighbourPositions().iterator();
+        var sameNeighboursPos = new ArrayList<Position>();
 
-        var candyOnPosition = playground.get(position.toIndex());
+        var candyOnPosition = board.getCellAt(position);
 
         while(neighboursPos.hasNext()) {
             var neighbourPos = neighboursPos.next();
-            var candyOnNeighbourPos = playground.get(neighbourPos.toIndex());
+            var candyOnNeighbourPos = board.getCellAt(neighbourPos);
 
             if(candyOnPosition.equals(candyOnNeighbourPos)) {
                 sameNeighboursPos.add(neighbourPos);

@@ -3,11 +3,13 @@ package be.kuleuven.candycrush.model;
 import java.util.ArrayList;
 
 public record Position(int rowNr, int columnNr, BoardSize bs) {
+    /*Constructor*/
     public Position {
         if(!(rowNr >= 0 && rowNr < bs.height() && columnNr >= 0 && columnNr < bs.width()))
             throw new IllegalArgumentException("The entered position is not valid!");
     }
 
+    /*Other methods*/
     public int toIndex() {
         return rowNr * bs.width() + columnNr;
     }

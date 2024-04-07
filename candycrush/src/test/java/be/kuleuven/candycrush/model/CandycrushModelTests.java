@@ -1,5 +1,4 @@
 package be.kuleuven.candycrush.model;
-import be.kuleuven.CheckNeighboursInGrid;
 import be.kuleuven.candycrush.model.Candy.*;
 import org.junit.jupiter.api.Test;
 
@@ -52,8 +51,8 @@ public class CandycrushModelTests {
         //zorgen voor geen neighbours
         ArrayList<Candy> nPlayground = new ArrayList<>(
                 List.of(new NormalCandy(2), new DubbelPunt(), new OnderVolledig(), new RandomBom()));
-        cm.setPlayground(nPlayground);
-        cm.updateCandySelected(new Position(0,0,cm.getBs()));
+        cm.getBoard().setPlayground(nPlayground);
+        cm.updateCandySelected(new Position(0,0,cm.getBoard().getBs()));
 
         // Assert
         String actual = outputStreamCaptor.toString().trim().replace("\r\n", "\n"); //dit heeft te maken met de whitespace tussening beide printstatements
@@ -73,8 +72,8 @@ public class CandycrushModelTests {
                 new NormalCandy(2),new NormalCandy(3),new NormalCandy(0),
                 new NormalCandy(3),new NormalCandy(3),new NormalCandy(3));
 
-        cm.setPlayground(playgroundWithNeighbours);
-        cm.updateCandySelected(new Position(1,1,cm.getBs()));
+        cm.getBoard().setPlayground(playgroundWithNeighbours);
+        cm.updateCandySelected(new Position(1,1,cm.getBoard().getBs()));
 
         //Assert
         assertThat(cm.getPlayer().getScore()).isEqualTo(5);
@@ -94,8 +93,8 @@ public class CandycrushModelTests {
                 new NormalCandy(1),new NormalCandy(1), new NormalCandy(0),
                 new NormalCandy(2),new NormalCandy(3),new NormalCandy(0),
                 new NormalCandy(3),new NormalCandy(0),new NormalCandy(3));
-        cm.setPlayground(playgroundWithNeighbours);
-        cm.updateCandySelected(new Position(1,1,cm.getBs()));
+        cm.getBoard().setPlayground(playgroundWithNeighbours);
+        cm.updateCandySelected(new Position(1,1,cm.getBoard().getBs()));
 
         //Assert
         String actual = outputStreamCaptor.toString().trim().replace("\r\n", "\n"); //dit heeft te maken met de whitespace tussening beide printstatements
@@ -109,8 +108,8 @@ public class CandycrushModelTests {
         CandycrushModel cm = new CandycrushModel(player1,new BoardSize(200,60));
 
         //Act
-        int actualWidth = cm.getBs().width();
-        int actualHeight = cm.getBs().height();
+        int actualWidth = cm.getBoard().getBs().width();
+        int actualHeight = cm.getBoard().getBs().height();
 
         //Assert
         assertThat(actualWidth).isEqualTo(200);
