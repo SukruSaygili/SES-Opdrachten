@@ -4,6 +4,7 @@ import static org.assertj.core.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.function.Function;
 
 public class BoardTests {
@@ -12,8 +13,8 @@ public class BoardTests {
     public void gegevenEenLegePlaygroundVoorStrings_VultElkePositieMetDeLetterAEnCheckedDit() {
         //Arrange
         BoardSize bs = new BoardSize(3, 3);
-        ArrayList<String> playground = new ArrayList<>();
-        Board<String> board = new Board<>(bs, playground);
+        HashMap<Position,String> playgroundMAP = new HashMap<>();
+        Board<String> board = new Board<>(bs, playgroundMAP);
 
         //Act
         Function<Position, String> cellCreator = position -> "A";
@@ -29,10 +30,10 @@ public class BoardTests {
     public void gegevenTweeBordenMetEentjeGevuld_KopieertDezeNaarHetAnderBord() {
         //Arrange
         BoardSize bs = new BoardSize(3, 3);
-        ArrayList<String> playground1 = new ArrayList<>();
-        ArrayList<String> playground2 = new ArrayList<>();
-        Board<String> board1 = new Board<>(bs, playground1);
-        Board<String> board2 = new Board<>(bs, playground2);
+        HashMap<Position,String> playgroundMAP1 = new HashMap<>();;
+        HashMap<Position,String> playgroundMAP2 = new HashMap<>();
+        Board<String> board1 = new Board<>(bs, playgroundMAP1);
+        Board<String> board2 = new Board<>(bs, playgroundMAP2);
 
         //Act
         board1.fill(position -> "A");

@@ -7,6 +7,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.*;
 
 public class PositionTests {
+
     @Test
     public void gegevenEenRijEnKolomnummerBinnenHetBereik_geeft_OvereenkomstigIndexTerug() {
         //Arrange

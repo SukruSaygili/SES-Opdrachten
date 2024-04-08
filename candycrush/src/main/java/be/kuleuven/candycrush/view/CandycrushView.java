@@ -13,6 +13,8 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 
 import java.net.URL;
+import java.util.HashSet;
+import java.util.Set;
 
 public class CandycrushView extends Region {
     /*variables*/
@@ -39,7 +41,7 @@ public class CandycrushView extends Region {
 
         System.out.println("x: "+me.getX()+"\ny: "+me.getY()+"\nrow: "+row+"\ncolumn: "+column);
 
-        System.out.println("position of clicked: " + posOfClicked.toString());
+        System.out.println("position of clicked: " + posOfClicked);
 
         return posOfClicked;
     }
@@ -60,29 +62,21 @@ public class CandycrushView extends Region {
     /*other methods*/
     public void update() {
         getChildren().clear();
-        int xPosITER = 0, yPosITER = 0;       //positive direction of y toward the bottom
 
-        var candys = model.getBoard().getPlayground().iterator();
+        Set<Candy> uniqueCandies = new HashSet<>(model.getBoard().getPlaygroundMAP().values());
 
-        while(candys.hasNext()) {
-            var iterPos = new Position(yPosITER,xPosITER,model.getBoard().getBs());
+        for (Candy c : uniqueCandies) {
+            Set<Position> positions = model.getBoard().getPositionsOfElement(c);
+            for (Position pos : positions) {
+                Rectangle candyPlate = new Rectangle(pos.columnNr() * widthCandyPlate, pos.rowNr() * heigthCandyPlate,
+                        widthCandyPlate, heigthCandyPlate);
 
-            Rectangle candyPlate = new Rectangle(iterPos.columnNr() * widthCandyPlate, iterPos.rowNr() * heigthCandyPlate,
-                    widthCandyPlate, heigthCandyPlate);
+                candyPlate.setFill(Color.TRANSPARENT);
+                candyPlate.setStroke(Color.LIGHTGRAY);
 
-            candyPlate.setFill(Color.TRANSPARENT);
-            candyPlate.setStroke(Color.LIGHTGRAY);
+                Node candyShape = makeCandyShape(pos, c);
 
-            var candy = makeCandyShape(iterPos,candys.next());
-
-            getChildren().addAll(candyPlate,candy);
-
-            if(iterPos.isLastColumn()) {
-                xPosITER  = 0;
-                yPosITER++;
-            }
-            else {
-                xPosITER ++;
+                getChildren().addAll(candyPlate, candyShape);
             }
         }
     }

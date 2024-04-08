@@ -6,6 +6,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
 
 import static org.mockito.Mockito.*;
@@ -48,11 +49,18 @@ public class CandycrushModelTests {
         System.setOut(new PrintStream(outputStreamCaptor));
 
         // Act
-        //zorgen voor geen neighbours
-        ArrayList<Candy> nPlayground = new ArrayList<>(
+        ArrayList<Candy> candies = new ArrayList<>(
                 List.of(new NormalCandy(2), new DubbelPunt(), new OnderVolledig(), new RandomBom()));
-        cm.getBoard().setPlayground(nPlayground);
+
+        HashMap<Position,Candy> playgroundMAP = new HashMap<>();
+        var positions = cm.getBoard().getBs().positions().iterator();
+        for (Candy candy : candies) {
+            playgroundMAP.put(positions.next(), candy);
+        }
+
+        cm.getBoard().setPlaygroundMAP(playgroundMAP);
         cm.updateCandySelected(new Position(0,0,cm.getBoard().getBs()));
+
 
         // Assert
         String actual = outputStreamCaptor.toString().trim().replace("\r\n", "\n"); //dit heeft te maken met de whitespace tussening beide printstatements
@@ -66,13 +74,19 @@ public class CandycrushModelTests {
         CandycrushModel cm = new CandycrushModel(player1,new BoardSize(3,3));
 
         //Act
-        ArrayList<Candy> playgroundWithNeighbours = new ArrayList<>();
-        Collections.addAll(playgroundWithNeighbours,
+        ArrayList<Candy> candiesWithNeighbours = new ArrayList<>();
+        Collections.addAll(candiesWithNeighbours,
                 new NormalCandy(1),new NormalCandy(3), new NormalCandy(0),
                 new NormalCandy(2),new NormalCandy(3),new NormalCandy(0),
                 new NormalCandy(3),new NormalCandy(3),new NormalCandy(3));
 
-        cm.getBoard().setPlayground(playgroundWithNeighbours);
+        HashMap<Position,Candy> playgroundMAP = new HashMap<>();
+        var positions = cm.getBoard().getBs().positions().iterator();
+        for(Candy c : candiesWithNeighbours) {
+            playgroundMAP.put(positions.next(),c);
+        }
+
+        cm.getBoard().setPlaygroundMAP(playgroundMAP);
         cm.updateCandySelected(new Position(1,1,cm.getBoard().getBs()));
 
         //Assert
@@ -88,12 +102,19 @@ public class CandycrushModelTests {
         System.setOut(new PrintStream(outputStreamCaptor));
 
         //Act
-        ArrayList<Candy> playgroundWithNeighbours = new ArrayList<>();
-        Collections.addAll(playgroundWithNeighbours,
+        ArrayList<Candy> playgroundWithNotEnoughNeighbours = new ArrayList<>();
+        Collections.addAll(playgroundWithNotEnoughNeighbours,
                 new NormalCandy(1),new NormalCandy(1), new NormalCandy(0),
                 new NormalCandy(2),new NormalCandy(3),new NormalCandy(0),
                 new NormalCandy(3),new NormalCandy(0),new NormalCandy(3));
-        cm.getBoard().setPlayground(playgroundWithNeighbours);
+
+        HashMap<Position,Candy> playgroundMAP = new HashMap<>();
+        var positions = cm.getBoard().getBs().positions().iterator();
+        for(Candy c : playgroundWithNotEnoughNeighbours) {
+            playgroundMAP.put(positions.next(),c);
+        }
+
+        cm.getBoard().setPlaygroundMAP(playgroundMAP);
         cm.updateCandySelected(new Position(1,1,cm.getBoard().getBs()));
 
         //Assert

@@ -3,7 +3,7 @@ package be.kuleuven.candycrush.model;
 import be.kuleuven.candycrush.model.Candy.*;
 
 import java.util.ArrayList;
-import java.util.Iterator;
+import java.util.HashMap;
 import java.util.Random;
 
 public class CandycrushModel {
@@ -17,7 +17,7 @@ public class CandycrushModel {
     //customizable constructor
     public CandycrushModel(Player player, BoardSize bs) {
         this.player = player;
-        board = new Board<>(bs,new ArrayList<>());
+        board = new Board<>(bs,new HashMap<>());
         board.fill(position -> generateRandomCandy());
     }
     //default for a standard game (overload)
@@ -29,17 +29,13 @@ public class CandycrushModel {
     public static void main(String[] args) {
         Player player1 = new Player("sukru");
         CandycrushModel model = new CandycrushModel(player1);
-        int i = 1;
-        Iterator<Candy> iter = model.getBoard().getPlayground().iterator();
-        while (iter.hasNext()) {
-            Candy c = iter.next();
-            System.out.print(c);
 
-            if ((i % model.getBoard().getBs().width()) == 0) {
+        for (Position p : model.getBoard().getBs().positions()) {
+            System.out.print(model.getBoard().getPlaygroundMAP().get(p));
+
+            if (p.isLastColumn()) {
                 System.out.print("\n");
-                i = 1;
             }
-            i++;
         }
         System.out.print("\n");
     }
@@ -120,4 +116,3 @@ public class CandycrushModel {
         };
     }
 }
-

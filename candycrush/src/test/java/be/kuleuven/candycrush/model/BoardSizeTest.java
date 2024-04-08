@@ -32,5 +32,4 @@ public class BoardSizeTest {
         assertThrows(IllegalArgumentException.class, () -> new BoardSize(0, 5).positions());
         assertThrows(IllegalArgumentException.class, () -> new BoardSize(5, 0).positions());
     }
-
 }
