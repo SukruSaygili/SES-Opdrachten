@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 
 public class BoardTests {
@@ -13,7 +14,7 @@ public class BoardTests {
     public void gegevenEenLegePlaygroundVoorStrings_VultElkePositieMetDeLetterAEnCheckedDit() {
         //Arrange
         BoardSize bs = new BoardSize(3, 3);
-        HashMap<Position,String> playgroundMAP = new HashMap<>();
+        ConcurrentHashMap<Position,String> playgroundMAP = new ConcurrentHashMap<>();
         Board<String> board = new Board<>(bs, playgroundMAP);
 
         //Act
@@ -30,8 +31,8 @@ public class BoardTests {
     public void gegevenTweeBordenMetEentjeGevuld_KopieertDezeNaarHetAnderBord() {
         //Arrange
         BoardSize bs = new BoardSize(3, 3);
-        HashMap<Position,String> playgroundMAP1 = new HashMap<>();;
-        HashMap<Position,String> playgroundMAP2 = new HashMap<>();
+        ConcurrentHashMap<Position,String> playgroundMAP1 = new ConcurrentHashMap<>();;
+        ConcurrentHashMap<Position,String> playgroundMAP2 = new ConcurrentHashMap<>();
         Board<String> board1 = new Board<>(bs, playgroundMAP1);
         Board<String> board2 = new Board<>(bs, playgroundMAP2);
 

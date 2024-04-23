@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 import static org.mockito.Mockito.*;
 import static org.assertj.core.api.Assertions.*;
@@ -52,7 +53,7 @@ public class CandycrushModelTests {
         ArrayList<Candy> candies = new ArrayList<>(
                 List.of(new NormalCandy(2), new DubbelPunt(), new OnderVolledig(), new RandomBom()));
 
-        HashMap<Position,Candy> playgroundMAP = new HashMap<>();
+        ConcurrentHashMap<Position,Candy> playgroundMAP = new ConcurrentHashMap<>();
         var positions = cm.getBoard().getBs().positions().iterator();
         for (Candy candy : candies) {
             playgroundMAP.put(positions.next(), candy);
@@ -80,7 +81,7 @@ public class CandycrushModelTests {
                 new NormalCandy(2),new NormalCandy(3),new NormalCandy(0),
                 new NormalCandy(3),new NormalCandy(3),new NormalCandy(3));
 
-        HashMap<Position,Candy> playgroundMAP = new HashMap<>();
+        ConcurrentHashMap<Position,Candy> playgroundMAP = new ConcurrentHashMap<>();
         var positions = cm.getBoard().getBs().positions().iterator();
         for(Candy c : candiesWithNeighbours) {
             playgroundMAP.put(positions.next(),c);
@@ -108,7 +109,7 @@ public class CandycrushModelTests {
                 new NormalCandy(2),new NormalCandy(3),new NormalCandy(0),
                 new NormalCandy(3),new NormalCandy(0),new NormalCandy(3));
 
-        HashMap<Position,Candy> playgroundMAP = new HashMap<>();
+        ConcurrentHashMap<Position,Candy> playgroundMAP = new ConcurrentHashMap<>();
         var positions = cm.getBoard().getBs().positions().iterator();
         for(Candy c : playgroundWithNotEnoughNeighbours) {
             playgroundMAP.put(positions.next(),c);

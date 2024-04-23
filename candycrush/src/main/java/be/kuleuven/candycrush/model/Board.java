@@ -1,24 +1,25 @@
 package be.kuleuven.candycrush.model;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.function.Function;
 
 public class Board <T> {
     private BoardSize bs;
-    private HashMap<Position,T> playgroundMAP;
-    private HashMap<T, Set<Position>> playgroundMAPREV;
+    private ConcurrentHashMap<Position,T> playgroundMAP;
+    private ConcurrentHashMap<T, Set<Position>> playgroundMAPREV;
 
 
     /*Constructor*/
-    public Board(BoardSize bs, HashMap<Position,T> playgroundMAP) {
+    public Board(BoardSize bs, ConcurrentHashMap<Position,T> playgroundMAP) {
         this.bs = bs;
         this.playgroundMAP = playgroundMAP;
-        this.playgroundMAPREV = new HashMap<>();
+        this.playgroundMAPREV = new ConcurrentHashMap<>();
 
         for(Map.Entry<Position,T> entry : playgroundMAP.entrySet()) {
             T element = entry.getValue();
             Position position = entry.getKey();
-            playgroundMAPREV.computeIfAbsent(element, k -> new HashSet<>()).add(position);
+            playgroundMAPREV.computeIfAbsent(element, k -> ConcurrentHashMap.newKeySet()).add(position);
         }
     }
 
@@ -26,12 +27,12 @@ public class Board <T> {
     public BoardSize getBs() {
         return bs;
     }
-    public HashMap<Position, T> getPlaygroundMAP() {
+    public ConcurrentHashMap<Position, T> getPlaygroundMAP() {
         return playgroundMAP;
     }
 
     /*setters*/
-    public void setPlaygroundMAP(HashMap<Position, T> playgroundMAP) {
+    public void setPlaygroundMAP(ConcurrentHashMap<Position, T> playgroundMAP) {
         this.playgroundMAP = playgroundMAP;
     }
 
@@ -55,18 +56,18 @@ public class Board <T> {
             Set<Position> pos = playgroundMAPREV.get(oldCell);
             if(pos != null) {
                 pos.remove(p);
-                if(pos.isEmpty()){
+                if(pos.isEmpty()) {
                     playgroundMAPREV.remove(oldCell);
                 }
             }
         }
-        playgroundMAPREV.computeIfAbsent(newCell,k->new HashSet<>()).add(p);
+        playgroundMAPREV.computeIfAbsent(newCell,k-> ConcurrentHashMap.newKeySet()).add(p);
     }
     public void fill(Function<Position, T> cellCreator) {
         for (Position position : bs.positions()) {
             T newCell = cellCreator.apply(position);
             playgroundMAP.put(position,newCell);
-            playgroundMAPREV.computeIfAbsent(newCell, k -> new HashSet<>()).add(position);
+            playgroundMAPREV.computeIfAbsent(newCell, k -> ConcurrentHashMap.newKeySet()).add(position);
         }
     }
     public void copyTo(Board<T> otherBoard) throws IllegalArgumentException {
@@ -81,7 +82,7 @@ public class Board <T> {
             Position pos = entry.getKey();
             T element = entry.getValue();
             otherBoard.playgroundMAP.put(pos,element);
-            otherBoard.playgroundMAPREV.computeIfAbsent(element, k-> new HashSet<>()).add(pos);
+            otherBoard.playgroundMAPREV.computeIfAbsent(element, k-> ConcurrentHashMap.newKeySet()).add(pos);
         }
 
     }

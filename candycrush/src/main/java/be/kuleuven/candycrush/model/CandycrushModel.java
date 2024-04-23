@@ -5,9 +5,9 @@ import be.kuleuven.candycrush.model.Candy.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Random;
+import java.util.concurrent.ConcurrentHashMap;
 
 public class CandycrushModel {
-    /*variables*/
     private final int lowerLimitAmountOfNeighbourcandys = 3;
     private Player player;
     private Board<Candy> board;
@@ -17,7 +17,7 @@ public class CandycrushModel {
     //customizable constructor
     public CandycrushModel(Player player, BoardSize bs) {
         this.player = player;
-        board = new Board<>(bs,new HashMap<>());
+        board = new Board<>(bs,new ConcurrentHashMap<>());
         board.fill(position -> generateRandomCandy());
     }
     //default for a standard game (overload)
@@ -102,7 +102,7 @@ public class CandycrushModel {
         }
         return sameNeighboursPos;
     }
-    public Candy generateRandomCandy() {
+    public static Candy generateRandomCandy() {     //statisch gemaakt om in threadclient gemakkelijk te kunnen gebruiken
         Random random = new Random();
         int candy = random.nextInt(10);
         //Indien zonder kansen, een normale candy komt vrij weinig voor wat niet logisch is

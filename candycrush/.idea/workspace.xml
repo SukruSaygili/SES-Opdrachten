@@ -7,18 +7,9 @@
     <list default="true" id="5285a866-9da5-4425-89e5-5948c9583a51" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/AllesGrezend.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/AllesGrezend.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/Candy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/Candy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/DubbelPunt.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/DubbelPunt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/NormalCandy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/NormalCandy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/OnderVolledig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/OnderVolledig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/RandomBom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/RandomBom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/BoardSizeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/BoardSizeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/BoardTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/BoardTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/CandycrushModelTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/CandycrushModelTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/PositionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/PositionTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +33,17 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="candycrush" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="candycrush" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="candycrush" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="verification" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -86,59 +88,60 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Gradle.BoardSizeTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.BoardSizeTest.geeftEenLegeLijstTerugWanneerBoardSizeOngeldigIs.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.BoardTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CandycrushModelTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CandycrushModelTests.gegevenEenIndexEnGeenNEIGHBOURS_GeeftEenPrintEnStoptDeMethodeCandySelected.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CandycrushModelTests.gegevenEenJuisteIndexCheckOfDeScoreJuistWordtGeupdate.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CandycrushModelTests.gegevenEenJuisteIndexCheckOfDeScoreJuistWordtGeupdatet.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CandycrushModelTests.gegevenEenJuisteIndexMetMinderDan3Neighbours_printThereAreNotEnoughNeighbourCandys.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CandycrushModelTests.gegevenEenModelMetDeAanpasbareConstructorDusWidhtEnHeightOpgegeven_GettersGevenHetJuisteResultaatTerug.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CandycrushModelTests.gegevenEenRijEnKolomAllebeiEenRandomWaardeBuitenHetBereik_BerekenDeIndex_GeeftNulEnPrintOutOfRange.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CandycrushModelTests.gegevenEenRijEnKolomEenVanDeTweeBuitenHetBereik_BerekenDeIndex_GeeftNulEnPrintOutOfRange.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CandycrushModelTests.gegevenEenRijEnKolom_BerekenDeIndex.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CandycrushModelTests.gegevenNegatieveIndex_GeeftEenPrintEnStoptDeMethodeupdateCandySelected.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CandycrushModelTests.gegevenNieuwePlayerMetNaam_GeeftNaamTerugInCandycrushmodelKlasse.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CandycrushModelTests.gegevenNieuwePlayerMetScore_GeeftScoreTerugInCandycrushmodelKlasse_GelijkAanNul.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.CandycrushModelTests.gegevenNieuwePlayerMetScore_GeeftScoreTerug_GelijkAanNul.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PositionTests.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PositionTests.gegevenEenBoardSizeEnPositie_InHetLinkerhoek_GeeftJuisteDirecteBurenTerug.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PositionTests.gegevenEenBoardSizeEnPositie_InHetMidden_GeeftJuisteDirecteBurenTerug.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PositionTests.gegevenEenBoardSizeEnPositie_RechterKantInHetMidden_GeeftJuisteDirecteBurenTerug.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PositionTests.gegevenEenIndexBinnenHetBereik_geeftEenPositieTerug.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PositionTests.gegevenEenOngeldigeIndex_geeftException.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PositionTests.gegevenEenPositieDieHetLaatsteElementInDeRijIs_GeeftTrue.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PositionTests.gegevenEenRijEnKolomnummer_geeft_OvereenkomstigIndexTerug.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Upgrade Gradle wrapper.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.candycrush [:CandycrushApplication.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.candycrush [:CandycrushModel.main()].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.candycrush [help].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.candycrush [run].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.candycrush [test].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/MSI-Gamer/Desktop/SES-OpdrachtenDeel1/candycrush&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.5482759&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.BoardSizeTest.executor": "Run",
+    "Gradle.BoardSizeTest.geeftEenLegeLijstTerugWanneerBoardSizeOngeldigIs.executor": "Run",
+    "Gradle.BoardTests.executor": "Run",
+    "Gradle.CandycrushModelTests.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenIndexEnGeenNEIGHBOURS_GeeftEenPrintEnStoptDeMethodeCandySelected.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenJuisteIndexCheckOfDeScoreJuistWordtGeupdate.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenJuisteIndexCheckOfDeScoreJuistWordtGeupdatet.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenJuisteIndexMetMinderDan3Neighbours_printThereAreNotEnoughNeighbourCandys.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenModelMetDeAanpasbareConstructorDusWidhtEnHeightOpgegeven_GettersGevenHetJuisteResultaatTerug.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenRijEnKolomAllebeiEenRandomWaardeBuitenHetBereik_BerekenDeIndex_GeeftNulEnPrintOutOfRange.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenRijEnKolomEenVanDeTweeBuitenHetBereik_BerekenDeIndex_GeeftNulEnPrintOutOfRange.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenRijEnKolom_BerekenDeIndex.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenNegatieveIndex_GeeftEenPrintEnStoptDeMethodeupdateCandySelected.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenNieuwePlayerMetNaam_GeeftNaamTerugInCandycrushmodelKlasse.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenNieuwePlayerMetScore_GeeftScoreTerugInCandycrushmodelKlasse_GelijkAanNul.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenNieuwePlayerMetScore_GeeftScoreTerug_GelijkAanNul.executor": "Run",
+    "Gradle.PositionTests.executor": "Run",
+    "Gradle.PositionTests.gegevenEenBoardSizeEnPositie_InHetLinkerhoek_GeeftJuisteDirecteBurenTerug.executor": "Run",
+    "Gradle.PositionTests.gegevenEenBoardSizeEnPositie_InHetMidden_GeeftJuisteDirecteBurenTerug.executor": "Run",
+    "Gradle.PositionTests.gegevenEenBoardSizeEnPositie_RechterKantInHetMidden_GeeftJuisteDirecteBurenTerug.executor": "Run",
+    "Gradle.PositionTests.gegevenEenIndexBinnenHetBereik_geeftEenPositieTerug.executor": "Run",
+    "Gradle.PositionTests.gegevenEenOngeldigeIndex_geeftException.executor": "Run",
+    "Gradle.PositionTests.gegevenEenPositieDieHetLaatsteElementInDeRijIs_GeeftTrue.executor": "Run",
+    "Gradle.PositionTests.gegevenEenRijEnKolomnummer_geeft_OvereenkomstigIndexTerug.executor": "Run",
+    "Gradle.Upgrade Gradle wrapper.executor": "Run",
+    "Gradle.candycrush [:CandycrushApplication.main()].executor": "Run",
+    "Gradle.candycrush [:CandycrushModel.main()].executor": "Run",
+    "Gradle.candycrush [:MultithreadingClient.main()].executor": "Run",
+    "Gradle.candycrush [help].executor": "Run",
+    "Gradle.candycrush [run].executor": "Run",
+    "Gradle.candycrush [test].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/MSI-Gamer/Desktop/SES-OpdrachtenDeel1/candycrush",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.5482759",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\MSI-Gamer\Desktop\SES-OpdrachtenDeel1\candycrush\libs" />
@@ -153,7 +156,7 @@
       <recent name="be.kuleuven.candycrush.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CandycrushApplication">
+  <component name="RunManager" selected="Application.MultithreadingClient">
     <configuration name="CandycrushApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="be.kuleuven.candycrush.CandycrushApplication" />
       <module name="candycrush.main" />
@@ -167,29 +170,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BoardSizeTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;be.kuleuven.candycrush.model.BoardSizeTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
+    <configuration name="MultithreadingClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="be.kuleuven.candycrush.model.MultithreadingClient" />
+      <module name="candycrush.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.kuleuven.candycrush.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <configuration name="CandycrushModelTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -264,10 +256,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.candycrush [test]" />
+        <item itemvalue="Application.MultithreadingClient" />
         <item itemvalue="Gradle.CandycrushModelTests" />
         <item itemvalue="Gradle.CandycrushModelTests.gegevenEenJuisteIndexCheckOfDeScoreJuistWordtGeupdatet" />
         <item itemvalue="Application.CandycrushApplication" />
-        <item itemvalue="Gradle.BoardSizeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -310,6 +302,9 @@
       <workItem from="1712560977574" duration="12920000" />
       <workItem from="1712575369212" duration="168000" />
       <workItem from="1712575564020" duration="64000" />
+      <workItem from="1712913219293" duration="46000" />
+      <workItem from="1713094756998" duration="4489000" />
+      <workItem from="1713863585273" duration="8341000" />
     </task>
     <servers />
   </component>
