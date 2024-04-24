@@ -1,6 +1,7 @@
 package be.kuleuven.candycrush.model;
 
 import java.util.ArrayList;
+import java.util.Collection;
 
 public record BoardSize(int width, int height) {
     /*Constructor*/
@@ -9,7 +10,7 @@ public record BoardSize(int width, int height) {
     }
 
     /*Other methods*/
-    public Iterable<Position> positions() {
+    public Collection<Position> positions() {
         ArrayList<Position> result = new ArrayList<>();
         int currentIndex = 0;
         while(currentIndex < width*height) {

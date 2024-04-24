@@ -1,6 +1,9 @@
 package be.kuleuven.candycrush.model;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.stream.Stream;
 
 public record Position(int rowNr, int columnNr, BoardSize bs) {
     /*Constructor*/
@@ -63,5 +66,34 @@ public record Position(int rowNr, int columnNr, BoardSize bs) {
     }
     public boolean isLastColumn() {
         return columnNr == (bs.width()-1);
+    }
+
+    public Stream<Position> walkLeft() {
+        return bs.positions().stream()
+                .filter(p ->  p.rowNr() == this.rowNr() && p.columnNr() <= this.columnNr())
+                .toList()                                                               //stream omdraaien zodat de teruggegeven stream
+                .reversed()                                                             //begint met de positie zelf en daarna die ernaast enz.
+                .stream();
+    }
+    public Stream<Position> walkRight() {
+        return bs.positions().stream()
+                .filter(p ->  p.rowNr() == this.rowNr() && p.columnNr() >= this.columnNr());
+    }
+    public Stream<Position> walkUp() {
+        return bs.positions().stream()
+                 /*vergelijking waaraan een positie moet voldoen om 'boven of op' this-positie te kunnen zitten,
+                   bepaalt de index van een candy die boven this-positie zit
+                   in de rij waarvan het rijnummer is gegeven aan onderstaande vergelijking*/
+                .filter(p -> p.rowNr() <= this.rowNr && p.toIndex() == (this.toIndex() - (this.bs.width() * (this.rowNr - p.rowNr))))
+                .toList()
+                .reversed()
+                .stream();
+    }
+    public Stream<Position> walkDown() {
+        return bs.positions().stream()
+                /*vergelijking waaraan een positie moet voldoen om 'onder of op' this-positie te kunnen zitten,
+                  bepaalt de index van een candy die onder this-positie zit
+                  in de rij waarvan het rijnummer is gegeven aan onderstaande vergelijking*/
+                .filter(p -> p.rowNr() >= this.rowNr && p.toIndex() == (this.toIndex() + (this.bs.width() * (p.rowNr - this.rowNr))));
     }
 }

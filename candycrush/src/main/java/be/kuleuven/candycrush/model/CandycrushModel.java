@@ -1,11 +1,13 @@
 package be.kuleuven.candycrush.model;
 
 import be.kuleuven.candycrush.model.Candy.*;
+import javafx.geometry.Pos;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Random;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Supplier;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class CandycrushModel {
     private final int lowerLimitAmountOfNeighbourcandys = 3;
@@ -114,5 +116,44 @@ public class CandycrushModel {
             case 9 -> new RandomBom();                                          //10% kans voor RandomBom
             default -> null;
         };
+    }
+
+    private boolean firstTwoHaveCandy(Candy candy, Stream<Position> positions) {
+        List<Position> firstTwoPositions = positions.limit(2).toList();
+
+        if (firstTwoPositions.size() < 2) {
+            return false;
+        }
+
+        return firstTwoPositions.stream().allMatch(position -> board.getCellAt(position).equals(candy));
+    }
+    private Stream<Position> horizontalStartingPositions() {
+        return board.getBs().positions().stream()
+                .filter(position -> !firstTwoHaveCandy(board.getCellAt(position),position.walkLeft()));
+    }
+    private Stream<Position> verticalStartingPositions() {
+        return board.getBs().positions().stream()
+                .filter(position -> !firstTwoHaveCandy(board.getCellAt(position),position.walkUp()));
+    }
+    private List<Position> longestMatchToRight(Position pos) {
+        return pos.walkRight()
+                .takeWhile(position -> board.getCellAt(position).equals(board.getCellAt(pos)))
+                .toList();
+    }
+    private List<Position> longestMatchDown(Position pos) {
+        return pos.walkDown()
+                .takeWhile(position -> board.getCellAt(position).equals(board.getCellAt(pos)))
+                .toList();
+    }
+
+    public Set<List<Position>> findAllMatches() {
+        var horizontalMatchPos = horizontalStartingPositions()
+                .map(this::longestMatchToRight);        //geeft een stream van lists van positions (Stream<list<Position>>)
+
+        var verticalMatchPos = verticalStartingPositions()
+                .map(this::longestMatchDown);
+
+        return Stream.concat(horizontalMatchPos, verticalMatchPos)
+                .filter(l -> l.size() >= 3).collect(Collectors.toSet());
     }
 }
