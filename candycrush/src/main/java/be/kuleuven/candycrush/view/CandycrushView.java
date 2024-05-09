@@ -14,6 +14,7 @@ import javafx.scene.shape.Rectangle;
 
 import java.net.URL;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class CandycrushView extends Region {
@@ -39,9 +40,10 @@ public class CandycrushView extends Region {
         int column = (int) me.getX()/ widthCandyPlate;
         Position posOfClicked = new Position(row,column,model.getBoard().getBs());
 
-        System.out.println("x: "+me.getX()+"\ny: "+me.getY()+"\nrow: "+row+"\ncolumn: "+column);
-
-        System.out.println("position of clicked: " + posOfClicked);
+        System.out.println("\n-----------------------------------------------");
+        System.out.println("--- Coordinate: " + "[X = " + me.getX() + ", Y = " + me.getY() + "] ---");
+        System.out.println("--- Position: " + "[rowNr = " + posOfClicked.rowNr() + ", columnNr = " + me.getY() + "] ---");
+        System.out.println("-----------------------------------------------\n");
 
         return posOfClicked;
     }
@@ -75,7 +77,6 @@ public class CandycrushView extends Region {
                 candyPlate.setStroke(Color.LIGHTGRAY);
 
                 Node candyShape = makeCandyShape(pos, c);
-
                 getChildren().addAll(candyPlate, candyShape);
             }
         }
@@ -128,7 +129,13 @@ public class CandycrushView extends Region {
                 specialCandy.setFill(Color.FUCHSIA);
                 yield specialCandy;
             }
+            case LegeCandy() -> {
+                specialCandy.setFill(Color.TRANSPARENT);
+                specialCandy.setMouseTransparent(true);     //niet gevoelig voor muiskliks = lege candy
+                yield specialCandy;
+            }
             default -> throw new IllegalArgumentException("Unknown candy!");
-        };
-    }
+            };
+        }
 }
+

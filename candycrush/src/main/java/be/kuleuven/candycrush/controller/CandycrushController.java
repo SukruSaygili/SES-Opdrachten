@@ -72,8 +72,7 @@ public class CandycrushController {
     public void candyTouch(MouseEvent me) {
         model.updateCandySelected(view.getPosOfClicked(me));
         update();
-        System.out.println(player.getName());
-        System.out.println(model.getPlayer().getScore());
+        System.out.println("Naam: "+ player.getName() + "   Score: " + model.getPlayer().getScore());
     }
 
     public void switchToBegin(ActionEvent event) {

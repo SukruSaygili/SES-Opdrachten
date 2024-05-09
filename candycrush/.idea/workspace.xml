@@ -6,10 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5285a866-9da5-4425-89e5-5948c9583a51" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/BoardSize.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/BoardSize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/CandycrushController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/CandycrushController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/Candy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/Candy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/CandycrushModelTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/CandycrushModelTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,8 +59,8 @@
         <option value="JUnit5 Test Class" />
         <option value="FxmlFile" />
         <option value="Interface" />
-        <option value="Record" />
         <option value="Class" />
+        <option value="Record" />
       </list>
     </option>
   </component>
@@ -108,6 +109,7 @@
     "Gradle.CandycrushModelTests.gegevenNieuwePlayerMetNaam_GeeftNaamTerugInCandycrushmodelKlasse.executor": "Run",
     "Gradle.CandycrushModelTests.gegevenNieuwePlayerMetScore_GeeftScoreTerugInCandycrushmodelKlasse_GelijkAanNul.executor": "Run",
     "Gradle.CandycrushModelTests.gegevenNieuwePlayerMetScore_GeeftScoreTerug_GelijkAanNul.executor": "Run",
+    "Gradle.Download Sources.executor": "Run",
     "Gradle.PositionTests.executor": "Run",
     "Gradle.PositionTests.gegevenEenBoardSizeEnPositie_InHetLinkerhoek_GeeftJuisteDirecteBurenTerug.executor": "Run",
     "Gradle.PositionTests.gegevenEenBoardSizeEnPositie_InHetMidden_GeeftJuisteDirecteBurenTerug.executor": "Run",
@@ -246,8 +248,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CandycrushApplication" />
         <item itemvalue="Gradle.candycrush [test]" />
+        <item itemvalue="Application.CandycrushApplication" />
         <item itemvalue="Gradle.CandycrushModelTests.allMatchTest" />
         <item itemvalue="Application.PositionTESTS" />
         <item itemvalue="Application.MultithreadingClient" />
@@ -257,8 +259,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
-        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
       </set>
     </attachedChunks>
   </component>
@@ -301,6 +303,11 @@
       <workItem from="1713968603555" duration="1902000" />
       <workItem from="1713975505550" duration="3422000" />
       <workItem from="1713980271047" duration="3209000" />
+      <workItem from="1714064048608" duration="7000" />
+      <workItem from="1715002525195" duration="377000" />
+      <workItem from="1715002936741" duration="54000" />
+      <workItem from="1715184718419" duration="7645000" />
+      <workItem from="1715227208438" duration="23050000" />
     </task>
     <servers />
   </component>

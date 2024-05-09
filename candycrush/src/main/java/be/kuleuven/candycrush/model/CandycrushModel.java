@@ -21,6 +21,7 @@ public class CandycrushModel {
         this.player = player;
         board = new Board<>(bs,new ConcurrentHashMap<>());
         board.fill(position -> generateRandomCandy());
+        updateBoard();
     }
     //default for a standard game (overload)
     public CandycrushModel(Player player) {
@@ -73,16 +74,15 @@ public class CandycrushModel {
 
         if (amountOfSameNeighbours >= lowerLimitAmountOfNeighbourcandys) {
             //de index zelf updaten
-            board.replaceCellAt(pos,generateRandomCandy());
+            board.replaceCellAt(pos,new LegeCandy());      //LegeCandy => lege plaats
 
             //buren updaten
             sameNeighbours = neighboursIterable.iterator();
             while (sameNeighbours.hasNext()) {
-                board.replaceCellAt(sameNeighbours.next(),generateRandomCandy());
+                board.replaceCellAt(sameNeighbours.next(),new LegeCandy());       //LegeCandy => lege plaats
                 player.setScore(player.getScore() + 1);
             }
             player.setScore(player.getScore() + 1);     //+1, het snoepje zelf dat de buren heeft
-            System.out.println(player.getName());
         }
         else {
             System.out.println("There are not enough neighbour candys!");
@@ -93,6 +93,10 @@ public class CandycrushModel {
         var sameNeighboursPos = new ArrayList<Position>();
 
         var candyOnPosition = board.getCellAt(position);
+        if(candyOnPosition.equals(new LegeCandy())) {
+            System.out.println("EMPTY SPACE!");
+            return sameNeighboursPos;                         //LegeCandy == 'lege plaats' => niet toevoegen => geen score
+        }
 
         while(neighboursPos.hasNext()) {
             var neighbourPos = neighboursPos.next();
@@ -129,11 +133,15 @@ public class CandycrushModel {
     }
     private Stream<Position> horizontalStartingPositions() {
         return board.getBs().positions().stream()
-                .filter(position -> !firstTwoHaveCandy(board.getCellAt(position),position.walkLeft()));
+                .filter(position -> !firstTwoHaveCandy(board.getCellAt(position),position.walkLeft())
+                        && !board.getCellAt(position).equals(new LegeCandy()));
+                        //LegeCandys niet meetellen in matches
     }
     private Stream<Position> verticalStartingPositions() {
         return board.getBs().positions().stream()
-                .filter(position -> !firstTwoHaveCandy(board.getCellAt(position),position.walkUp()));
+                .filter(position -> !firstTwoHaveCandy(board.getCellAt(position),position.walkUp())
+                        && !board.getCellAt(position).equals(new LegeCandy()));
+                        //LegeCandys niet meetellen in matches
     }
     private List<Position> longestMatchToRight(Position pos) {
         return pos.walkRight()
@@ -155,5 +163,56 @@ public class CandycrushModel {
 
         return Stream.concat(horizontalMatchPos, verticalMatchPos)
                 .filter(l -> l.size() >= 3).collect(Collectors.toSet());
+    }
+
+    public void clearMatch(List<Position> match) {
+        if(match.isEmpty()) return;
+
+        board.replaceCellAt(match.getFirst(),new LegeCandy());      //LegeCandy => stelt een lege candy voor
+                                                                    //een muisklik erop zorgt voor GEEN reactie
+        clearMatch(match.subList(1,match.size()));
+    }
+
+    public void fallDownTo(Position pos) {
+        var positionsAbovePos = pos.walkUp().toList();
+        if(pos.rowNr() == 0) return;
+
+        if(board.getCellAt(pos).equals(new LegeCandy())) {
+            for(var position : positionsAbovePos) {
+                if(position.rowNr() == 0) break;
+                copyCandyFromTo(positionsAbovePos.get((positionsAbovePos.indexOf(position)+1)), position);
+            }
+        }
+
+        fallDownTo(positionsAbovePos.get(1));
+    }
+    //Hulpfunctie voor de fallDownTo()-methode
+    private void copyCandyFromTo(Position from, Position to) {
+        Candy candy = board.getCellAt(to);
+        board.replaceCellAt(to,board.getCellAt(from));
+        board.replaceCellAt(from,candy);
+    }
+
+    //Enkel deze methode mag opgeroepen worden, want de counter-parameter mag niet gekozen worden.
+    public boolean updateBoard() {
+        return updateBoard(0);
+    }
+    private boolean updateBoard(int counter) {
+        var allMatches = findAllMatches();
+        if(allMatches.isEmpty()) {
+            boolean verwijderd = counter > 0;
+            System.out.println("#verwijderd:"+counter);
+            System.out.println("MEER DAN 1 MATCH VERWIJDERD: "+verwijderd);
+            return verwijderd;
+        }
+
+        for(var match : allMatches) {
+            clearMatch(match);
+            counter++;
+        }
+
+        board.getBs().positions().forEach(this::fallDownTo);
+
+        return updateBoard(counter);
     }
 }
