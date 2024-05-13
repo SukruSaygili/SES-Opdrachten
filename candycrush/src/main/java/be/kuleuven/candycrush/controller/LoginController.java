@@ -35,7 +35,7 @@ public class LoginController {
         assert background != null : "fx:id=\"background\" was not injected: check your FXML file 'login-view.fxml'.";
         assert startButton != null : "fx:id=\"startButton\" was not injected: check your FXML file 'login-view.fxml'.";
         assert name != null : "fx:id=\"name\" was not injected: check your FXML file 'login-view.fxml'.";
-        player = new Player("");
+        player = new Player("",0);
         view = new LoginView();
         background.getChildren().addAll(view.getBeginPane());   //achtergrond GIF
         startButton.setOnAction(this::switchToGame);
@@ -52,7 +52,7 @@ public class LoginController {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/be/kuleuven/candycrush/candycrush-view.fxml"));
             Parent root = loader.load();
             CandycrushController controller = loader.getController();
-            controller.setPlayer(player);       //spelernaam ingevuld op het loginscherm naar de game doorgeven
+
 
             stage = (Stage)((Node)event.getSource()).getScene().getWindow();
             scene = new Scene(root);
@@ -60,7 +60,7 @@ public class LoginController {
             stage.setFullScreen(false);
             stage.show();
             player.setName(name.getText());
-
+            controller.setPlayer(player);       //spelernaam ingevuld op het loginscherm naar de game doorgeven
         }
         catch (IOException e) {
             e.printStackTrace();

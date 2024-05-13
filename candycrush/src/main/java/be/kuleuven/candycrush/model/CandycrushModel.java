@@ -21,12 +21,50 @@ public class CandycrushModel {
         this.player = player;
         board = new Board<>(bs,new ConcurrentHashMap<>());
         board.fill(position -> generateRandomCandy());
-        updateBoard();
+        board.updateBoard();
     }
     //default for a standard game (overload)
     public CandycrushModel(Player player) {
         this(player, new BoardSize(9,9));
     }
+
+    //create model from ASCII
+    public static CandycrushModel createBoardFromString(String configuration) {
+        var lines = configuration.toLowerCase().lines().toList();
+        BoardSize size = new BoardSize(lines.size(), lines.getFirst().length());
+        var model = new CandycrushModel(new Player("default"), size); // Create model using the constructor
+        for (int row = 0; row < lines.size(); row++) {
+            var line = lines.get(row);
+            for (int col = 0; col < line.length(); col++) {
+                model.getBoard().replaceCellAt(new Position(row, col, size), characterToCandy(line.charAt(col)));
+            }
+        }
+        return model;
+    }
+    private static Candy characterToCandy(char c) {
+        return switch(c) {
+            case '.' -> null;
+            case 'o' -> new NormalCandy(0);
+            case '*' -> new NormalCandy(1);
+            case '#' -> new NormalCandy(2);
+            case '@' -> new NormalCandy(3);
+            default -> throw new IllegalArgumentException("Unexpected value: " + c);
+        };
+    }
+    public static void printBoard(CandycrushModel model) {
+        Board<Candy> board = model.getBoard();
+        BoardSize size = board.getBs();
+
+        for (int row = 0; row < size.height(); row++) {
+            for (int col = 0; col < size.width(); col++) {
+                Position position = new Position(row, col, size);
+                Candy candy = board.getCellAt(position);
+                System.out.print(candy == null ? "." : candy.toString());
+            }
+            System.out.println();
+        }
+    }
+
 
     /*main method*/
     public static void main(String[] args) {
@@ -120,99 +158,5 @@ public class CandycrushModel {
             case 9 -> new RandomBom();                                          //10% kans voor RandomBom
             default -> null;
         };
-    }
-
-    private boolean firstTwoHaveCandy(Candy candy, Stream<Position> positions) {
-        List<Position> firstTwoPositions = positions.limit(2).toList();
-
-        if (firstTwoPositions.size() < 2) {
-            return false;
-        }
-
-        return firstTwoPositions.stream().allMatch(position -> board.getCellAt(position).equals(candy));
-    }
-    private Stream<Position> horizontalStartingPositions() {
-        return board.getBs().positions().stream()
-                .filter(position -> !firstTwoHaveCandy(board.getCellAt(position),position.walkLeft())
-                        && !board.getCellAt(position).equals(new LegeCandy()));
-                        //LegeCandys niet meetellen in matches
-    }
-    private Stream<Position> verticalStartingPositions() {
-        return board.getBs().positions().stream()
-                .filter(position -> !firstTwoHaveCandy(board.getCellAt(position),position.walkUp())
-                        && !board.getCellAt(position).equals(new LegeCandy()));
-                        //LegeCandys niet meetellen in matches
-    }
-    private List<Position> longestMatchToRight(Position pos) {
-        return pos.walkRight()
-                .takeWhile(position -> board.getCellAt(position).equals(board.getCellAt(pos)))
-                .toList();
-    }
-    private List<Position> longestMatchDown(Position pos) {
-        return pos.walkDown()
-                .takeWhile(position -> board.getCellAt(position).equals(board.getCellAt(pos)))
-                .toList();
-    }
-
-    public Set<List<Position>> findAllMatches() {
-        var horizontalMatchPos = horizontalStartingPositions()
-                .map(this::longestMatchToRight);        //geeft een stream van lists van positions (Stream<list<Position>>)
-
-        var verticalMatchPos = verticalStartingPositions()
-                .map(this::longestMatchDown);
-
-        return Stream.concat(horizontalMatchPos, verticalMatchPos)
-                .filter(l -> l.size() >= 3).collect(Collectors.toSet());
-    }
-
-    public void clearMatch(List<Position> match) {
-        if(match.isEmpty()) return;
-
-        board.replaceCellAt(match.getFirst(),new LegeCandy());      //LegeCandy => stelt een lege candy voor
-                                                                    //een muisklik erop zorgt voor GEEN reactie
-        clearMatch(match.subList(1,match.size()));
-    }
-
-    public void fallDownTo(Position pos) {
-        var positionsAbovePos = pos.walkUp().toList();
-        if(pos.rowNr() == 0) return;
-
-        if(board.getCellAt(pos).equals(new LegeCandy())) {
-            for(var position : positionsAbovePos) {
-                if(position.rowNr() == 0) break;
-                copyCandyFromTo(positionsAbovePos.get((positionsAbovePos.indexOf(position)+1)), position);
-            }
-        }
-
-        fallDownTo(positionsAbovePos.get(1));
-    }
-    //Hulpfunctie voor de fallDownTo()-methode
-    private void copyCandyFromTo(Position from, Position to) {
-        Candy candy = board.getCellAt(to);
-        board.replaceCellAt(to,board.getCellAt(from));
-        board.replaceCellAt(from,candy);
-    }
-
-    //Enkel deze methode mag opgeroepen worden, want de counter-parameter mag niet gekozen worden.
-    public boolean updateBoard() {
-        return updateBoard(0);
-    }
-    private boolean updateBoard(int counter) {
-        var allMatches = findAllMatches();
-        if(allMatches.isEmpty()) {
-            boolean verwijderd = counter > 0;
-            System.out.println("#verwijderd:"+counter);
-            System.out.println("MEER DAN 1 MATCH VERWIJDERD: "+verwijderd);
-            return verwijderd;
-        }
-
-        for(var match : allMatches) {
-            clearMatch(match);
-            counter++;
-        }
-
-        board.getBs().positions().forEach(this::fallDownTo);
-
-        return updateBoard(counter);
     }
 }

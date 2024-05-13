@@ -6,8 +6,9 @@ import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Stream;
 
+import static be.kuleuven.candycrush.model.CandycrushModel.createBoardFromString;
+import static be.kuleuven.candycrush.model.CandycrushModel.printBoard;
 import static org.mockito.Mockito.*;
 import static org.assertj.core.api.Assertions.*;
 
@@ -125,16 +126,93 @@ public class CandycrushModelTests {
     public void gegevenEenModelMetDeAanpasbareConstructorDusWidhtEnHeightOpgegeven_GettersGevenHetJuisteResultaatTerug() {
         //Arrange
         Player player1 = new Player("sukru");
-        CandycrushModel cm = new CandycrushModel(player1,new BoardSize(200,60));
+        CandycrushModel cm = new CandycrushModel(player1,new BoardSize(2,2));
 
         //Act
         int actualWidth = cm.getBoard().getBs().width();
         int actualHeight = cm.getBoard().getBs().height();
 
         //Assert
-        assertThat(actualWidth).isEqualTo(200);
-        assertThat(actualHeight).isEqualTo(60);
+        assertThat(actualWidth).isEqualTo(2);
+        assertThat(actualHeight).isEqualTo(2);
 
+    }
+
+    @Test
+    public void gegevenEenBordMetMatches_TestOfAlleMatchesGevondenWorden() {
+        //Arrange
+        CandycrushModel model = createBoardFromString("""
+           *o@#
+           o#@#
+           @@@#
+           *ooo""");
+        Board<Candy> board = model.getBoard();
+        BoardSize size = board.getBs();
+
+        //Act
+        Set<List<Position>> allMatches = board.findAllMatches();
+
+        //Assert
+        Set<List<Position>> expectedMatches = new HashSet<>();
+        expectedMatches.add(List.of(new Position(2,0,size),
+                                    new Position(2,1,size),
+                                    new Position(2,2,size)));
+        expectedMatches.add(List.of(new Position(0,2,size),
+                                    new Position(1,2,size),
+                                    new Position(2,2,size)));
+        expectedMatches.add(List.of(new Position(0,3,size),
+                                    new Position(1,3,size),
+                                    new Position(2,3,size)));
+        expectedMatches.add(List.of(new Position(3,1,size),
+                                    new Position(3,2,size),
+                                    new Position(3,3,size)));
+        assertThat(allMatches).containsExactlyInAnyOrderElementsOf(expectedMatches);
+    }
+
+    @Test
+    public void gegevenEenbordMetMatches_TestOfAlleMatchesVerwijderdWorden() {
+        //Arrange
+        CandycrushModel model = createBoardFromString("""
+           *o@#
+           o#@#
+           @@@#
+           *ooo""");
+        Board<Candy> board = model.getBoard();
+        BoardSize size = board.getBs();
+
+        //Act
+        var allMatches = board.findAllMatches();
+        allMatches.forEach(board::clearMatch);
+
+        //Assert
+        allMatches.stream()
+                .flatMap(List::stream)
+                .map(board::getCellAt)
+                .forEach(cell -> assertThat(cell).isEqualTo(new LegeCandy()));
+    }
+
+    @Test
+    public void gegevenEenbordMetMatchesIn_L_Vorm_Na1Switch_GaatNaOfDezeNietDubbelGeteldWord() {
+        //Arrange
+        CandycrushModel model = createBoardFromString("""
+           *o@#
+           o#@o
+           @@*o
+           *o@#""");
+        printBoard(model);
+
+        //Act
+        Board<Candy> board = model.getBoard();
+        BoardSize size = board.getBs();
+        board.switchCells(new Position(2,2, size), new Position(3,2,size));
+        System.out.println("\nSWITCHED BOARD");
+        printBoard(model);
+        board.updateBoard();
+        System.out.println("\nUPDATED BOARD");
+        printBoard(model);
+
+        //Assert
+        assertThat(board.getAmountOfCandiesDeleted()).isEqualTo(5);
     }
 }
 

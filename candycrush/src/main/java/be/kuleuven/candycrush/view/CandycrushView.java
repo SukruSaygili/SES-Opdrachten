@@ -14,7 +14,6 @@ import javafx.scene.shape.Rectangle;
 
 import java.net.URL;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 public class CandycrushView extends Region {
@@ -78,6 +77,33 @@ public class CandycrushView extends Region {
 
                 Node candyShape = makeCandyShape(pos, c);
                 getChildren().addAll(candyPlate, candyShape);
+            }
+        }
+    }
+
+    public void drawSelectionAround(Position pos) {
+        double xCircle = pos.columnNr() * widthCandyPlate + ((double) widthCandyPlate /2);
+        double yCircle = pos.rowNr() * heigthCandyPlate + ((double) heigthCandyPlate /2);
+        double xRectangle = xCircle - (double) radiusCandy;     //linkerbovenhoek vierkant
+        double yRectangle = yCircle - (double) radiusCandy;     //linkerbovenhoek vierkant
+
+        Candy selectedCandy = model.getBoard().getCellAt(pos);
+        int strokeWidth = 5;
+        if(!(selectedCandy instanceof LegeCandy)){
+            if (!(selectedCandy instanceof NormalCandy)) {
+                Rectangle selectionRect = new Rectangle(xRectangle, yRectangle, radiusCandy*2, radiusCandy*2);
+                selectionRect.setFill(Color.TRANSPARENT);
+                selectionRect.setStroke(Color.WHITE);
+                selectionRect.setStrokeWidth(strokeWidth);
+                getChildren().add(selectionRect);
+            }
+            else {
+                Circle selectionCircle = new Circle(xCircle,
+                        yCircle, radiusCandy);
+                selectionCircle.setFill(Color.TRANSPARENT);
+                selectionCircle.setStroke(Color.WHITE);
+                selectionCircle.setStrokeWidth(strokeWidth);
+                getChildren().add(selectionCircle);
             }
         }
     }

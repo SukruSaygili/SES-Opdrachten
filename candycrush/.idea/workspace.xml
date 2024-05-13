@@ -7,10 +7,12 @@
     <list default="true" id="5285a866-9da5-4425-89e5-5948c9583a51" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/CandycrushController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/CandycrushController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/Candy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Candy/Candy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Board.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Position.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/CandycrushModelTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/CandycrushModelTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,6 +99,7 @@
     "Gradle.BoardTests.executor": "Run",
     "Gradle.CandycrushModelTests.allMatchTest.executor": "Run",
     "Gradle.CandycrushModelTests.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenBordMetMatches_TestOfAlleMatchesGevondenWorden.executor": "Run",
     "Gradle.CandycrushModelTests.gegevenEenIndexEnGeenNEIGHBOURS_GeeftEenPrintEnStoptDeMethodeCandySelected.executor": "Run",
     "Gradle.CandycrushModelTests.gegevenEenJuisteIndexCheckOfDeScoreJuistWordtGeupdate.executor": "Run",
     "Gradle.CandycrushModelTests.gegevenEenJuisteIndexCheckOfDeScoreJuistWordtGeupdatet.executor": "Run",
@@ -105,6 +108,10 @@
     "Gradle.CandycrushModelTests.gegevenEenRijEnKolomAllebeiEenRandomWaardeBuitenHetBereik_BerekenDeIndex_GeeftNulEnPrintOutOfRange.executor": "Run",
     "Gradle.CandycrushModelTests.gegevenEenRijEnKolomEenVanDeTweeBuitenHetBereik_BerekenDeIndex_GeeftNulEnPrintOutOfRange.executor": "Run",
     "Gradle.CandycrushModelTests.gegevenEenRijEnKolom_BerekenDeIndex.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenbordMetEenMatchIn_L_Vorm_GaatNaOfDezeNietDubbelGeteldWord.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenbordMetMatchesIn_L_Vorm_GaatNaOfDezeNietDubbelGeteldWord.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenbordMetMatchesIn_L_Vorm_Na1Switch_GaatNaOfDezeNietDubbelGeteldWord.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenbordMetMatches_TestOfAlleMatchesVerwijderdWorden.executor": "Run",
     "Gradle.CandycrushModelTests.gegevenNegatieveIndex_GeeftEenPrintEnStoptDeMethodeupdateCandySelected.executor": "Run",
     "Gradle.CandycrushModelTests.gegevenNieuwePlayerMetNaam_GeeftNaamTerugInCandycrushmodelKlasse.executor": "Run",
     "Gradle.CandycrushModelTests.gegevenNieuwePlayerMetScore_GeeftScoreTerugInCandycrushmodelKlasse_GelijkAanNul.executor": "Run",
@@ -160,7 +167,7 @@
       <recent name="be.kuleuven.candycrush.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CandycrushApplication">
+  <component name="RunManager" selected="Gradle.CandycrushModelTests">
     <configuration name="CandycrushApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="be.kuleuven.candycrush.CandycrushApplication" />
       <module name="candycrush.main" />
@@ -174,33 +181,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MultithreadingClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="be.kuleuven.candycrush.model.MultithreadingClient" />
-      <module name="candycrush.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="be.kuleuven.candycrush.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PositionTESTS" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="be.kuleuven.candycrush.model.PositionTESTS" />
-      <module name="candycrush.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="be.kuleuven.candycrush.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CandycrushModelTests.allMatchTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CandycrushModelTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -213,7 +194,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;be.kuleuven.candycrush.model.CandycrushModelTests.allMatchTest&quot;" />
+            <option value="&quot;be.kuleuven.candycrush.model.CandycrushModelTests&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -224,35 +205,85 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="candycrush [test]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CandycrushModelTests.gegevenEenBordMetMatches_TestOfAlleMatchesGevondenWorden" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="test" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;be.kuleuven.candycrush.model.CandycrushModelTests.gegevenEenBordMetMatches_TestOfAlleMatchesGevondenWorden&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>false</RunAsTest>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="CandycrushModelTests.gegevenEenbordMetMatchesIn_L_Vorm_Na1Switch_GaatNaOfDezeNietDubbelGeteldWord" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;be.kuleuven.candycrush.model.CandycrushModelTests.gegevenEenbordMetMatchesIn_L_Vorm_Na1Switch_GaatNaOfDezeNietDubbelGeteldWord&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="CandycrushModelTests.gegevenEenbordMetMatches_TestOfAlleMatchesVerwijderdWorden" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;be.kuleuven.candycrush.model.CandycrushModelTests.gegevenEenbordMetMatches_TestOfAlleMatchesVerwijderdWorden&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.candycrush [test]" />
+        <item itemvalue="Gradle.CandycrushModelTests" />
+        <item itemvalue="Gradle.CandycrushModelTests.gegevenEenbordMetMatchesIn_L_Vorm_Na1Switch_GaatNaOfDezeNietDubbelGeteldWord" />
+        <item itemvalue="Gradle.CandycrushModelTests.gegevenEenbordMetMatches_TestOfAlleMatchesVerwijderdWorden" />
+        <item itemvalue="Gradle.CandycrushModelTests.gegevenEenBordMetMatches_TestOfAlleMatchesGevondenWorden" />
         <item itemvalue="Application.CandycrushApplication" />
-        <item itemvalue="Gradle.CandycrushModelTests.allMatchTest" />
-        <item itemvalue="Application.PositionTESTS" />
-        <item itemvalue="Application.MultithreadingClient" />
       </list>
     </recent_temporary>
   </component>
@@ -308,6 +339,9 @@
       <workItem from="1715002936741" duration="54000" />
       <workItem from="1715184718419" duration="7645000" />
       <workItem from="1715227208438" duration="23050000" />
+      <workItem from="1715346347095" duration="12245000" />
+      <workItem from="1715486516249" duration="36495000" />
+      <workItem from="1715605874722" duration="12722000" />
     </task>
     <servers />
   </component>

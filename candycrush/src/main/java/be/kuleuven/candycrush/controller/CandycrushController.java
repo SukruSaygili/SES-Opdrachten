@@ -2,6 +2,7 @@ package be.kuleuven.candycrush.controller;
 
 import be.kuleuven.candycrush.model.CandycrushModel;
 import be.kuleuven.candycrush.model.Player;
+import be.kuleuven.candycrush.model.Position;
 import be.kuleuven.candycrush.view.CandycrushView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -35,6 +36,7 @@ public class CandycrushController {
     private CandycrushModel model;
     private Player player;
     private CandycrushView view;
+    private Position firstClickedPosition = null;
 
     //scenewissel
     private Stage stage;
@@ -58,21 +60,36 @@ public class CandycrushController {
         gamePanel.getChildren().addAll(view);
 
         scoreText.setText(""+ 0);
-        view.setOnMouseClicked(this::candyTouch);
+        view.setOnMouseClicked(this::candyTouchSelect);
 
         resetButton.setOnAction(this::switchToBegin);
     }
 
     public void update() {
+        model.getBoard().updateBoard();
+        model.getPlayer().setScore(model.getBoard().getAmountOfCandiesDeleted());
         view.update();
-        nameText.setText(player.getName());
-        scoreText.setText(""+ player.getScore());
+        nameText.setText(model.getPlayer().getName());
+        scoreText.setText(""+ model.getPlayer().getScore());
+        System.out.println("Naam: "+ model.getPlayer().getName() + "   Score: " + model.getPlayer().getScore());
     }
 
     public void candyTouch(MouseEvent me) {
         model.updateCandySelected(view.getPosOfClicked(me));
         update();
-        System.out.println("Naam: "+ player.getName() + "   Score: " + model.getPlayer().getScore());
+    }
+
+    public void candyTouchSelect(MouseEvent me) {
+        Position clickedPosition = view.getPosOfClicked(me);
+        view.drawSelectionAround(clickedPosition);
+        if (firstClickedPosition == null) {
+            firstClickedPosition = clickedPosition;
+        }
+        else {
+            model.getBoard().switchCells(firstClickedPosition, clickedPosition);
+            firstClickedPosition = null;
+            update();
+        }
     }
 
     public void switchToBegin(ActionEvent event) {

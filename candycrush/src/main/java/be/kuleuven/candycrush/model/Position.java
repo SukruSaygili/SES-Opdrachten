@@ -94,4 +94,9 @@ public record Position(int rowNr, int columnNr, BoardSize bs) {
                   in de rij waarvan het rijnummer is gegeven aan onderstaande vergelijking*/
                 .filter(p -> p.rowNr() >= this.rowNr && p.toIndex() == (this.toIndex() + (this.bs.width() * (p.rowNr - this.rowNr))));
     }
+
+    //hulp-methode voor opdracht 14 (switchCells()-methode in board-klasse)
+    public boolean isLocatedNextTo(Position p) {
+        return Math.abs(this.columnNr - p.columnNr) + Math.abs(this.rowNr - p.rowNr) == 1;
+    }
 }
