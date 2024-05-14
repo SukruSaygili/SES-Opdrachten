@@ -6,12 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5285a866-9da5-4425-89e5-5948c9583a51" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/CandycrushController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/CandycrushController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/controller/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/CandycrushModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/model/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/kuleuven/candycrush/view/CandycrushView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/CandycrushModelTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/be/kuleuven/candycrush/model/CandycrushModelTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,8 +93,17 @@
     "Gradle.BoardSizeTest.geeftEenLegeLijstTerugWanneerBoardSizeOngeldigIs.executor": "Run",
     "Gradle.BoardTests.executor": "Run",
     "Gradle.CandycrushModelTests.allMatchTest.executor": "Run",
+    "Gradle.CandycrushModelTests.backtrackingTestModel1.executor": "Run",
+    "Gradle.CandycrushModelTests.backtrackingTestModel2.executor": "Run",
+    "Gradle.CandycrushModelTests.backtrackingTestModel3.executor": "Run",
     "Gradle.CandycrushModelTests.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenBordMEtMatches_EnEenSequentieVanWisselsInLVrom_CheckOfDeScoreJuistWordtGeteld.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenBordMEtMatches_EnEenSequentieVanWissels_CheckOfDeScoreJuistWordtGeteld.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenBordMEtMatches_EnEenSequentieVanWissels_CheckOfDeScoreJuistWordtGeteld2.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenBordMetMatchesNaSwitches_CheckOfAlleParenTeruggegevenWorden.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenBordMetMatchesNaSwitches_CheckOfAlleParenTeruggegevenWorden2.executor": "Run",
     "Gradle.CandycrushModelTests.gegevenEenBordMetMatches_TestOfAlleMatchesGevondenWorden.executor": "Run",
+    "Gradle.CandycrushModelTests.gegevenEenBordZonderMatchesNaSwitches_CheckOfLijstLeegIs.executor": "Run",
     "Gradle.CandycrushModelTests.gegevenEenIndexEnGeenNEIGHBOURS_GeeftEenPrintEnStoptDeMethodeCandySelected.executor": "Run",
     "Gradle.CandycrushModelTests.gegevenEenJuisteIndexCheckOfDeScoreJuistWordtGeupdate.executor": "Run",
     "Gradle.CandycrushModelTests.gegevenEenJuisteIndexCheckOfDeScoreJuistWordtGeupdatet.executor": "Run",
@@ -167,7 +171,7 @@
       <recent name="be.kuleuven.candycrush.model" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.CandycrushModelTests">
+  <component name="RunManager" selected="Application.CandycrushApplication">
     <configuration name="CandycrushApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="be.kuleuven.candycrush.CandycrushApplication" />
       <module name="candycrush.main" />
@@ -181,7 +185,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CandycrushModelTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CandycrushModelTests.backtrackingTestModel1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -194,7 +198,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;be.kuleuven.candycrush.model.CandycrushModelTests&quot;" />
+            <option value="&quot;be.kuleuven.candycrush.model.CandycrushModelTests.backtrackingTestModel1&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -205,7 +209,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CandycrushModelTests.gegevenEenBordMetMatches_TestOfAlleMatchesGevondenWorden" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CandycrushModelTests.gegevenEenBordMEtMatches_EnEenSequentieVanWisselsInLVrom_CheckOfDeScoreJuistWordtGeteld" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -218,7 +222,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;be.kuleuven.candycrush.model.CandycrushModelTests.gegevenEenBordMetMatches_TestOfAlleMatchesGevondenWorden&quot;" />
+            <option value="&quot;be.kuleuven.candycrush.model.CandycrushModelTests.gegevenEenBordMEtMatches_EnEenSequentieVanWisselsInLVrom_CheckOfDeScoreJuistWordtGeteld&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -229,7 +233,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CandycrushModelTests.gegevenEenbordMetMatchesIn_L_Vorm_Na1Switch_GaatNaOfDezeNietDubbelGeteldWord" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CandycrushModelTests.gegevenEenBordMEtMatches_EnEenSequentieVanWissels_CheckOfDeScoreJuistWordtGeteld" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -242,7 +246,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;be.kuleuven.candycrush.model.CandycrushModelTests.gegevenEenbordMetMatchesIn_L_Vorm_Na1Switch_GaatNaOfDezeNietDubbelGeteldWord&quot;" />
+            <option value="&quot;be.kuleuven.candycrush.model.CandycrushModelTests.gegevenEenBordMEtMatches_EnEenSequentieVanWissels_CheckOfDeScoreJuistWordtGeteld&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -253,7 +257,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="CandycrushModelTests.gegevenEenbordMetMatches_TestOfAlleMatchesVerwijderdWorden" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="CandycrushModelTests.gegevenEenBordMEtMatches_EnEenSequentieVanWissels_CheckOfDeScoreJuistWordtGeteld2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -266,7 +270,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;be.kuleuven.candycrush.model.CandycrushModelTests.gegevenEenbordMetMatches_TestOfAlleMatchesVerwijderdWorden&quot;" />
+            <option value="&quot;be.kuleuven.candycrush.model.CandycrushModelTests.gegevenEenBordMEtMatches_EnEenSequentieVanWissels_CheckOfDeScoreJuistWordtGeteld2&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -279,11 +283,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.CandycrushModelTests" />
-        <item itemvalue="Gradle.CandycrushModelTests.gegevenEenbordMetMatchesIn_L_Vorm_Na1Switch_GaatNaOfDezeNietDubbelGeteldWord" />
-        <item itemvalue="Gradle.CandycrushModelTests.gegevenEenbordMetMatches_TestOfAlleMatchesVerwijderdWorden" />
-        <item itemvalue="Gradle.CandycrushModelTests.gegevenEenBordMetMatches_TestOfAlleMatchesGevondenWorden" />
         <item itemvalue="Application.CandycrushApplication" />
+        <item itemvalue="Gradle.CandycrushModelTests.backtrackingTestModel1" />
+        <item itemvalue="Gradle.CandycrushModelTests.gegevenEenBordMEtMatches_EnEenSequentieVanWisselsInLVrom_CheckOfDeScoreJuistWordtGeteld" />
+        <item itemvalue="Gradle.CandycrushModelTests.gegevenEenBordMEtMatches_EnEenSequentieVanWissels_CheckOfDeScoreJuistWordtGeteld2" />
+        <item itemvalue="Gradle.CandycrushModelTests.gegevenEenBordMEtMatches_EnEenSequentieVanWissels_CheckOfDeScoreJuistWordtGeteld" />
       </list>
     </recent_temporary>
   </component>
@@ -341,7 +345,10 @@
       <workItem from="1715227208438" duration="23050000" />
       <workItem from="1715346347095" duration="12245000" />
       <workItem from="1715486516249" duration="36495000" />
-      <workItem from="1715605874722" duration="12722000" />
+      <workItem from="1715605874722" duration="13097000" />
+      <workItem from="1715658886448" duration="7842000" />
+      <workItem from="1715667147380" duration="11183000" />
+      <workItem from="1715690712097" duration="587000" />
     </task>
     <servers />
   </component>

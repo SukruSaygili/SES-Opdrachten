@@ -214,6 +214,218 @@ public class CandycrushModelTests {
         //Assert
         assertThat(board.getAmountOfCandiesDeleted()).isEqualTo(5);
     }
+
+    @Test
+    public void gegevenEenBordMetMatchesNaSwitches_CheckOfAlleParenTeruggegevenWorden() {
+        //Arrange
+        CandycrushModel model1 = createBoardFromString("""
+               @@o#
+               o*#o
+               @@**
+               *#@@""");
+        Board<Candy> board = model1.getBoard();
+        BoardSize size = board.getBs();
+
+        //Act
+        var pairs = board.matchAfterSwitchPairs();
+
+        //Assert
+        List<List<Position>> expectedPairs = new ArrayList<>();
+        expectedPairs.add(List.of(new Position(1,1,size), new Position(2, 1,size)));
+        expectedPairs.add(List.of(new Position(2,2,size), new Position(3,2,size)));
+        expectedPairs.add(List.of(new Position(2,1,size), new Position(3,1,size)));
+
+
+        // Assert
+        assertThat(pairs).containsExactlyInAnyOrderElementsOf(expectedPairs);
+    }
+
+    @Test
+    public void gegevenEenBordMetMatchesNaSwitches_CheckOfAlleParenTeruggegevenWorden2() {
+        //Arrange
+        CandycrushModel model2 = createBoardFromString("""
+                #oo##
+                #@o@@
+                *##o@
+                @@*@o
+                **#*o""");
+        Board<Candy> board = model2.getBoard();
+        BoardSize size = board.getBs();
+
+        //Act
+        var pairs = board.matchAfterSwitchPairs();
+
+        //Assert
+        List<List<Position>> expectedPairs = new ArrayList<>();
+        expectedPairs.add(List.of(new Position(1,1,size), new Position(1,2,size)));
+        expectedPairs.add(List.of(new Position(1,0,size), new Position(2,0,size)));
+        expectedPairs.add(List.of(new Position(3,2,size), new Position(3,3,size)));
+        expectedPairs.add(List.of(new Position(2,3,size), new Position(2,4,size)));
+        expectedPairs.add(List.of(new Position(4,2,size), new Position(4,3,size)));
+        expectedPairs.add(List.of(new Position(3,3,size), new Position(3,4,size)));
+        expectedPairs.add(List.of(new Position(2,0,size), new Position(2,1,size)));
+        expectedPairs.add(List.of(new Position(3,2,size), new Position(4,2,size)));
+        expectedPairs.add(List.of(new Position(2,2,size), new Position(2,3,size)));
+
+
+        // Assert
+        assertThat(pairs).containsExactlyInAnyOrderElementsOf(expectedPairs);
+    }
+
+    @Test
+    public void gegevenEenBordZonderMatchesNaSwitches_CheckOfLijstLeegIs() {
+        //Arrange
+        CandycrushModel model = createBoardFromString("""
+                #o*#
+                #*o@
+                *@#*
+                @@**""");
+        Board<Candy> board = model.getBoard();
+        BoardSize size = board.getBs();
+
+        //Act
+        var pairs = board.matchAfterSwitchPairs();
+
+        // Assert
+        assertThat(pairs).isEmpty();
+    }
+
+    @Test
+    public void gegevenEenBordMEtMatches_EnEenSequentieVanWissels_CheckOfDeScoreJuistWordtGeteld() {
+        //Arrange
+        CandycrushModel model1 = createBoardFromString("""
+           @@o#
+           o*#o
+           @@**
+           *#@@""");
+
+        Board<Candy> board = model1.getBoard();
+        BoardSize size = board.getBs();
+
+        //Act
+        List<List<Position>> switchesToExectute = new ArrayList<>();
+        switchesToExectute.add(List.of(new Position(1,1, size), new Position(2,1,size)));
+        switchesToExectute.add(List.of(new Position(1,0, size), new Position(1,1,size)));
+        switchesToExectute.add(List.of(new Position(1,3, size), new Position(2,3,size)));
+        switchesToExectute.add(List.of(new Position(2,1, size), new Position(3,1,size)));
+        int score = board.calculateScore(switchesToExectute);
+
+        //Assert
+        assertThat(score).isEqualTo(15);
+    }
+
+    @Test
+    public void gegevenEenBordMEtMatches_EnEenSequentieVanWissels_CheckOfDeScoreJuistWordtGeteld2() {
+        //Arrange
+        CandycrushModel model1 = createBoardFromString("""
+           @@o#
+           o*#o
+           @@**
+           *#@@""");
+
+        Board<Candy> board = model1.getBoard();
+        BoardSize size = board.getBs();
+
+        //Act
+        List<List<Position>> switchesToExectute = new ArrayList<>();
+        switchesToExectute.add(List.of(new Position(1,1, size), new Position(2,1,size)));
+        int score = board.calculateScore(switchesToExectute);
+
+        //Assert
+        assertThat(score).isEqualTo(3);
+    }
+
+    @Test
+    public void gegevenEenBordMEtMatches_EnEenSequentieVanWisselsInLVrom_CheckOfDeScoreJuistWordtGeteld() {
+        //Arrange
+        CandycrushModel model = createBoardFromString("""
+                *o@#
+                o#@o
+                @@*o
+                *o@#""");
+
+        Board<Candy> board = model.getBoard();
+        BoardSize size = board.getBs();
+
+        //Act
+        List<List<Position>> switchesToExectute = new ArrayList<>();
+        switchesToExectute.add(List.of(new Position(2,2, size), new Position(3,2,size)));
+        int score = board.calculateScore(switchesToExectute);
+        printBoard(model);
+
+        //Assert
+        assertThat(score).isEqualTo(5);
+    }
+
+    @Test
+    public void backtrackingTestModel1() {
+        //Arrange
+        CandycrushModel model1 = createBoardFromString("""
+           @@o#
+           o*#o
+           @@**
+           *#@@""");
+        Board<Candy> board = model1.getBoard();
+
+        //Act
+        var switches = board.maximizeScore();
+        System.out.println(switches);
+        System.out.println(board.calculateScore(switches));
+
+        printBoard(model1);
+
+        //Assert
+
+
+    }
+
+    @Test
+    public void backtrackingTestModel2() {
+        //Arrange
+        CandycrushModel model2 = createBoardFromString("""
+           #oo##
+           #@o@@
+           *##o@
+           @@*@o
+           **#*o""");
+        Board<Candy> board = model2.getBoard();
+
+        //Act
+        var switches = board.maximizeScore();
+        System.out.println(switches);
+        System.out.println(board.calculateScore(switches));
+
+        printBoard(model2);
+
+        //Assert
+
+
+        //Assert
+    }
+
+    @Test
+    public void backtrackingTestModel3() {
+        //Arrange
+        CandycrushModel model3 = createBoardFromString("""
+           #@#oo@
+           @**@**
+           o##@#o
+           @#oo#@
+           @*@**@
+           *#@##*""");
+        Board<Candy> board = model3.getBoard();
+
+        //Act
+        var switches = board.maximizeScore();
+        System.out.println(switches);
+        System.out.println(board.calculateScore(switches));
+
+        printBoard(model3);
+
+        //Assert
+    }
+
+
 }
 
 

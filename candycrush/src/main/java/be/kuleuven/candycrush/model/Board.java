@@ -116,23 +116,25 @@ public class Board <T> {
     private Stream<Position> horizontalStartingPositions() {
         return this.getBs().positions().stream()
                 .filter(position -> !firstTwoHaveCandy((Candy)this.getCellAt(position),position.walkLeft())
-                        && !this.getCellAt(position).equals(new LegeCandy()));
+                        && !(this.getCellAt(position) instanceof LegeCandy));
         //LegeCandys niet meetellen in matches
     }
     private Stream<Position> verticalStartingPositions() {
         return this.getBs().positions().stream()
                 .filter(position -> !firstTwoHaveCandy((Candy)this.getCellAt(position),position.walkUp())
-                        && !this.getCellAt(position).equals(new LegeCandy()));
+                        && !(this.getCellAt(position) instanceof LegeCandy));
         //LegeCandys niet meetellen in matches
     }
     private List<Position> longestMatchToRight(Position pos) {
         return pos.walkRight()
-                .takeWhile(position -> this.getCellAt(position).equals(this.getCellAt(pos)))
+                .takeWhile(position -> this.getCellAt(position).equals(this.getCellAt(pos)) &&
+                        !(this.getCellAt(position) instanceof LegeCandy))
                 .toList();
     }
     private List<Position> longestMatchDown(Position pos) {
         return pos.walkDown()
-                .takeWhile(position -> this.getCellAt(position).equals(this.getCellAt(pos)))
+                .takeWhile(position -> this.getCellAt(position).equals(this.getCellAt(pos))  &&
+                        !(this.getCellAt(position) instanceof LegeCandy))
                 .toList();
     }
     public Set<List<Position>> findAllMatches() {
@@ -176,7 +178,8 @@ public class Board <T> {
         return updateBoard(0);
     }
     private boolean updateBoard(int counter) {
-        var allMatches = findAllMatches();
+        var allMatches = findAllMatches().stream().filter(positions -> !(positions.contains(new LegeCandy())))
+                .collect(Collectors.toSet());
         if(allMatches.isEmpty()) {
             return counter > 0;
         }
@@ -233,6 +236,69 @@ public class Board <T> {
         return false;
     }
 
+
+    public List<List<Position>> maximizeScore() {
+        Board<T> copyOfOriginalBoard = new Board<>(this.bs, new ConcurrentHashMap<>());
+        this.copyTo(copyOfOriginalBoard);
+        return maximizeScore(new ArrayList<>(), (Board<Candy>)copyOfOriginalBoard, null);
+    }
+    private List<List<Position>> maximizeScore(List<List<Position>> wissels,
+                                              Board<Candy> board,
+                                              List<List<Position>> bestSoFar) {
+        var pairs = board.matchAfterSwitchPairs();
+
+        if (pairs.isEmpty()) {
+            var solution = List.copyOf(wissels);
+            if (bestSoFar == null || isBetterThan(board, solution, bestSoFar)) {
+                return solution;
+            }
+            else {
+                return bestSoFar;
+            }
+        }
+
+        for(var pair : pairs) {
+            Board<Candy> copy = new Board<>(board.bs,new ConcurrentHashMap<>());
+            board.copyTo(copy);
+
+            wissels.add(pair);
+            board.switchCells(pair.getFirst(), pair.getLast());
+            board.updateBoard();
+            bestSoFar = maximizeScore(wissels, board, bestSoFar);
+
+            copy.copyTo(board);
+            wissels.removeLast();
+        }
+        return bestSoFar;
+    }
+
+
+
+    /*Gaat na of er één of andere wissel mogelijk is op heel het bord en geeft deze positieparen terug.*/
+    public List<List<Position>> matchAfterSwitchPairs() {
+        var list = new ArrayList<List<Position>>();
+        var usedPairs = new HashSet<String>();
+        var positions = bs.positions();
+
+        for (var p1 : positions) {
+            for (var p2 : positions) {
+                if(getCellAt(p1) instanceof LegeCandy || getCellAt(p2) instanceof LegeCandy) continue;
+                if (p1.isLocatedNextTo(p2)) {
+                    String pairKey = p1.hashCode() + "-" + p2.hashCode();
+                    String reversePairKey = p2.hashCode() + "-" + p1.hashCode();
+
+                    if (!usedPairs.contains(pairKey) && !usedPairs.contains(reversePairKey)) {
+                        if (matchAfterSwitch(p1, p2)) {
+                            list.add(List.of(p1, p2));
+                            usedPairs.add(pairKey);
+                        }
+                    }
+                }
+            }
+        }
+        return list;
+    }
+
     public int calculateScore(List<List<Position>> switchesToExecute) {
         Board<T> copyOfOriginalBoard = new Board<>(this.bs, new ConcurrentHashMap<>());
         this.copyTo(copyOfOriginalBoard);
@@ -242,5 +308,20 @@ public class Board <T> {
             copyOfOriginalBoard.updateBoard();
         }
         return copyOfOriginalBoard.amountOfCandiesDeleted;
+    }
+
+    private boolean isBetterThan(Board<Candy> board, List<List<Position>> solution1, List<List<Position>> solution2) {
+        int score1 = board.calculateScore(solution1);
+        int score2 = board.calculateScore(solution2);
+
+        if (score1 > score2) {
+            return true;
+        }
+        else if (score1 < score2) {
+            return false;
+        }
+        else {
+            return solution1.size() < solution2.size();
+        }
     }
 }
